@@ -1,0 +1,73 @@
+{
+  "workbench.colorTheme": "Legacy - Material Theme Darker High Contrast",
+  "window.zoomLevel": 0,
+  "emmet.triggerExpansionOnTab": true,
+  "workbench.colorCustomizations": {
+    "activityBarBadge.background": "#FF4081",
+    "list.activeSelectionForeground": "#FF4081",
+    "list.inactiveSelectionForeground": "#FF4081",
+    "list.highlightForeground": "#FF4081",
+    "scrollbarSlider.activeBackground": "#FF408150",
+    "editorSuggestWidget.highlightForeground": "#FF4081",
+    "textLink.foreground": "#FF4081",
+    "progressBar.background": "#FF4081",
+    "pickerGroup.foreground": "#FF4081",
+    "tab.activeBorder": "#FF4081",
+    "notificationLink.foreground": "#FF4081",
+    "editorWidget.resizeBorder": "#FF4081",
+    "editorWidget.border": "#FF4081",
+    "settings.modifiedItemIndicator": "#FF4081",
+    "settings.modifiedItemForeground": "#FF4081",
+    "settings.headerForeground": "#FF4081",
+    "panelTitle.activeBorder": "#FF4081",
+    "breadcrumb.activeSelectionForeground": "#FF4081",
+    "menu.selectionForeground": "#FF4081",
+    "menubar.selectionForeground": "#FF4081"
+  },
+  "editor.fontFamily": "Source Code Pro for Powerline, Meslo LG M DZ for Powerline, Menlo, Monaco, 'Courier New', monospace, ",
+  "editor.fontWeight": "500",
+  "materialTheme.accent": "Pink",
+  "javascript.implicitProjectConfig.experimentalDecorators": true,
+  "editor.formatOnSave": false,
+  "javascript.validate.enable": false,
+  "javascript.format.enable": false,
+  "vetur.validation.template": false,
+  "vetur.format.defaultFormatter.html": "none",
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+  "terminal.integrated.fontFamily": "Roboto Mono Medium for Powerline",
+  "terminal.integrated.fontSize": 13,
+  "editor.tabSize": 2,
+  "scssFormatter.useTabs": true,
+  "sync.gist": "f7d6f380f7036de99fca63adf6355ac7",
+  "terminal.integrated.rendererType": "dom",
+  "breadcrumbs.enabled": true,
+  "workbench.iconTheme": "vscode-icons",
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "npm.enableScriptExplorer": true,
+  "workbench.startupEditor": "welcomePage",
+  "vsicons.dontShowNewVersionMessage": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+  // past settings remove if it doesn't matter  
+  // "eslint.validate": [
+  //   "javascript",
+  //   "javascriptreact",
+  //   {
+  //     "language": "typescript",
+  //     "autoFix": true
+  //   },
+  //   {
+  //     "language": "vue",
+  //     "autoFix": true
+  //   },
+  //   {
+  //     "language": "vue-html",
+  //     "autoFix": true
+  //   }
+  // ],
+  // "eslint.autoFixOnSave": true,
+}
