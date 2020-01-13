@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "workbench.colorTheme": "Material Theme Darker High Contrast",
+=======
+  "workbench.colorTheme": "Community Material Theme Darker High Contrast",
+>>>>>>> 8d41d156aaadded02b3c0ddf87b705a26e4117df
   "window.zoomLevel": 0,
   "emmet.triggerExpansionOnTab": true,
   "workbench.colorCustomizations": {
@@ -38,6 +42,7 @@
   "scss.validate": false,
   "terminal.integrated.fontFamily": "Roboto Mono Medium for Powerline",
   "terminal.integrated.fontSize": 13,
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
   "editor.tabSize": 2,
   "scssFormatter.useTabs": true,
   "sync.gist": "f7d6f380f7036de99fca63adf6355ac7",
