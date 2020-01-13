@@ -52,22 +52,4 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   }
-  // past settings remove if it doesn't matter  
-  // "eslint.validate": [
-  //   "javascript",
-  //   "javascriptreact",
-  //   {
-  //     "language": "typescript",
-  //     "autoFix": true
-  //   },
-  //   {
-  //     "language": "vue",
-  //     "autoFix": true
-  //   },
-  //   {
-  //     "language": "vue-html",
-  //     "autoFix": true
-  //   }
-  // ],
-  // "eslint.autoFixOnSave": true,
 }
