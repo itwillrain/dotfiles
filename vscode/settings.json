@@ -38,6 +38,7 @@
   "scss.validate": false,
   "terminal.integrated.fontFamily": "Roboto Mono Medium for Powerline",
   "terminal.integrated.fontSize": 13,
+  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
   "editor.tabSize": 2,
   "scssFormatter.useTabs": true,
   "sync.gist": "f7d6f380f7036de99fca63adf6355ac7",
