@@ -1,9 +1,5 @@
 {
-<<<<<<< HEAD
-  "workbench.colorTheme": "Material Theme Darker High Contrast",
-=======
   "workbench.colorTheme": "Community Material Theme Darker High Contrast",
->>>>>>> 8d41d156aaadded02b3c0ddf87b705a26e4117df
   "window.zoomLevel": 0,
   "emmet.triggerExpansionOnTab": true,
   "workbench.colorCustomizations": {
