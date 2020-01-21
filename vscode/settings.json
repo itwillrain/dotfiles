@@ -2,6 +2,9 @@
   "workbench.colorTheme": "Community Material Theme Darker High Contrast",
   "window.zoomLevel": 0,
   "emmet.triggerExpansionOnTab": true,
+  "emmet.variables": {
+    "lang": "ja"
+  },
   "workbench.colorCustomizations": {
     "activityBarBadge.background": "#FF4081",
     "list.activeSelectionForeground": "#FF4081",
