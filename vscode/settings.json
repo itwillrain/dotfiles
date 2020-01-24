@@ -55,5 +55,6 @@
   "vsicons.dontShowNewVersionMessage": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "git.autofetch": true
 }
