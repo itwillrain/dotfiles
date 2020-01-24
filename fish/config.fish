@@ -1,6 +1,8 @@
 #peco
 function fish_user_key_bindings
-    bind \cr peco_select_history
+  bind \cr peco_select_history	
+  bind \c] peco_change_directory # Bind for prco change directory to Ctrl+]
 end
-set -x PATH $HOME/.anyenv/bin $PATH
 status --is-interactive; and source (anyenv init -|psub)
+
+
