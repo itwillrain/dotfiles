@@ -21,3 +21,4 @@ function peco_change_directory
     ls -ad */|perl -pe "s#^#$PWD/#"|grep -v \.git
   end | sed -e 's/\/$//' | awk '!a[$0]++' | _peco_change_directory $argv
 end
+
