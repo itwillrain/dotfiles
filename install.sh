@@ -1,4 +1,5 @@
-!/bin/fish
+#!/bin/sh
+
 # symlink dotfiles
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
 ln -sf ~/dotfiles/.zshrc ~/.zshrc
@@ -8,6 +9,6 @@ ln -sf ~/dotfiles/nvim ~/.config/nvim
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 
 # update
-source ~/dotfiles/.config/fish/config.fish
-source ~/dotfiles/.config/fish/init.vim
-source ~/dotfiles/.tmux.conf
+# source ~/dotfiles/fish/config.fish
+# source ~/dotfiles/fish/init.vim
+# source ~/dotfiles/.tmux.conf
