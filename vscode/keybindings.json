@@ -1,11 +1,61 @@
 // Place your key bindings in this file to overwrite the defaults
+// 既定値を上書きするには、このファイル内にキー バインドを挿入します
 [
 	{
 		"key": "ctrl+cmd+p",
 		"command": "extension.ghqOpen"
 	},
-	{
-		"key": "ctrl+t",
-		"command": "workbench.action.terminal.toggleTerminal"
-	},
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+d",
+    "command": "workbench.action.terminal.splitInActiveWorkspace",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+cmd+left",
+    "command": "-workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+cmd+right",
+    "command": "-workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  }
 ]
