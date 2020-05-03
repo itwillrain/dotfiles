@@ -1,5 +1,5 @@
 {
-  "workbench.colorTheme": "Community Material Theme Darker High Contrast",
+  "workbench.colorTheme": "Dracula",
   "window.zoomLevel": 0,
   "emmet.triggerExpansionOnTab": true,
   "emmet.variables": {
@@ -29,7 +29,6 @@
   },
   "editor.fontFamily": "Source Code Pro for Powerline, Meslo LG M DZ for Powerline, Menlo, Monaco, 'Courier New', monospace, ",
   "editor.fontWeight": "500",
-  "materialTheme.accent": "Pink",
   "javascript.implicitProjectConfig.experimentalDecorators": true,
   "editor.formatOnSave": false,
   "javascript.validate.enable": false,
@@ -39,12 +38,9 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "terminal.integrated.fontFamily": "Roboto Mono Medium for Powerline",
   "terminal.integrated.fontSize": 13,
   "terminal.integrated.shell.osx": "/usr/local/bin/fish",
   "editor.tabSize": 2,
-  "scssFormatter.useTabs": true,
-  "sync.gist": "f7d6f380f7036de99fca63adf6355ac7",
   "terminal.integrated.rendererType": "dom",
   "breadcrumbs.enabled": true,
   "workbench.iconTheme": "vscode-icons",
@@ -56,5 +52,7 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
-  "git.autofetch": true
+  "git.autofetch": true,
+  "editor.minimap.enabled": false,
+  "terminal.integrated.fontFamily": "Source Code Pro for Powerline"
 }
