@@ -1,6 +1,6 @@
 {
   "workbench.colorTheme": "Dracula",
-  "window.zoomLevel": 0,
+  "window.zoomLevel": 1,
   "emmet.triggerExpansionOnTab": true,
   "emmet.variables": {
     "lang": "ja"
