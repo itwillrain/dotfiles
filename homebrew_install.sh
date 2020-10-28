@@ -27,6 +27,6 @@ echo "homebrew周りの設定が終了しました"
 
 ### .Brewfileに記載されているアプリをインストール
 echo ".Brewfileに記載されているアプリをインストールします"
-brew bundle --global --file '.Brewfile'
+brew bundle --verbose --file '.Brewfile'
 
 ### fishシェルに切り替える

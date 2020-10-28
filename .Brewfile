@@ -8,11 +8,12 @@ brew "fish"
 brew "ghq"
 brew "peco"	
 brew "jq"	
+brew "anyenv"
 
 cask "the-unarchiver"
 cask "dropbox"
 cask "appcleaner"
-cask "openinterminal":
+cask "openinterminal"
 cask "google-chrome"
 cask "google-japanese-ime"
 cask "authy"
