@@ -9,6 +9,7 @@ brew "ghq"
 brew "peco"	
 brew "jq"	
 brew "anyenv"
+brew "yarn"
 
 cask "the-unarchiver"
 cask "dropbox"
@@ -25,5 +26,9 @@ cask "sketch"
 cask "docker"
 cask "postman"
 cask "adobe-creative-cloud"
+cask "coteditor"
+cask "Karabiner-Elements"
 
 mas "Slack", id: 803453959
+mas "Amphetamine", id:937984704
+mas "LINE", id:539883307 
