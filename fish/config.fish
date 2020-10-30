@@ -1,6 +1,14 @@
 set -x ANDROID_SDK $HOME/Library/Android/sdk
 set -x PATH $ANDROID_SDK/emulator $PATH
 set -x PATH $ANDROID_SDK/platform-tools $PATH
+set -x PATH $ANDROID_SDK/tools $PATH
+set -x PATH $ANDROID_SDK/tools/bin $PATH
+
+set -x ANDROID_HOME $HOME/Library/Android/sdk
+set -x PATH $ANDROID_HOME/emulator $PATH
+set -x PATH $ANDROID_HOME/platform-tools $PATH
+set -x PATH $ANDROID_HOME/tools $PATH
+set -x PATH $ANDROID_HOME/tools/bin $PATH
 #peco
 function fish_user_key_bindings
   bind \cr peco_select_history	
