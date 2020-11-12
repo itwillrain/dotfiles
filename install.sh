@@ -8,6 +8,8 @@ ln -sf ~/dotfiles/fish ~/.config/fish
 ln -sf ~/dotfiles/nvim ~/.config/nvim
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
 ln -sf ~/dotfiles/.commit_template ~/.commit_template
+ln -sf ~/dotfiles/.gitconfig  ~/.gitconfig
+ln -sf ~/dotfiles/.gitignore_global  ~/.gitignore_global
 
 # update
 # source ~/dotfiles/fish/config.fish

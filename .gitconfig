@@ -1,0 +1,17 @@
+[ghq]
+	root = /Users/takeshi_matsushita/gitserver
+[user]
+	name = Takeshi Matsushita
+	email = matsushita@neopa.jp
+[core]
+	excludesfile = /Users/takeshi_matsushita/.gitignore_global
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/takeshi_matsushita/.commit_template
+[merge]
+	ff = false
