@@ -1,6 +1,6 @@
 {
   "workbench.colorTheme": "Dracula",
-  "window.zoomLevel": 1,
+  "window.zoomLevel": 0,
   "emmet.triggerExpansionOnTab": true,
   "emmet.variables": {
     "lang": "ja"
@@ -29,7 +29,6 @@
   },
   "editor.fontFamily": "Source Code Pro for Powerline, Meslo LG M DZ for Powerline, Menlo, Monaco, 'Courier New', monospace, ",
   "editor.fontWeight": "500",
-  "javascript.implicitProjectConfig.experimentalDecorators": true,
   "editor.formatOnSave": false,
   "javascript.validate.enable": false,
   "javascript.format.enable": false,
@@ -46,11 +45,11 @@
   "workbench.iconTheme": "vscode-icons",
   "editor.suggestSelection": "first",
   "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "npm.enableScriptExplorer": true,
-  "workbench.startupEditor": "welcomePage",
+  "workbench.startupEditor": "newUntitledFile",
   "vsicons.dontShowNewVersionMessage": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll.eslint": true,
+    "source.fixAll.markdownlint": true
   },
   "git.autofetch": true,
   "editor.minimap.enabled": false,
@@ -58,5 +57,8 @@
   "editor.fontSize": 14,
   "settingsSync.ignoredSettings": [
   ],
-  "open-in-browser.default": "chrome"
+  "open-in-browser.default": "chrome",
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
 }

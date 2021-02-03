@@ -1,6 +1,7 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
+tap "matsu0228/homebrew-fsrpl"
 
 brew "mas"
 brew "git"
