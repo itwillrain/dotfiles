@@ -2,6 +2,7 @@ tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
 tap "matsu0228/homebrew-fsrpl"
+tap "AdoptOpenJDK/openjdk"
 
 brew "mas"
 brew "git"
@@ -29,6 +30,8 @@ cask "postman"
 cask "adobe-creative-cloud"
 cask "coteditor"
 cask "Karabiner-Elements"
+cask "adoptopenjdk8"
+cask "adoptopenjdk12"
 
 mas "Slack", id: 803453959
 mas "Amphetamine", id:937984704
