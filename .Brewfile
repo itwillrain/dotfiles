@@ -1,18 +1,25 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-tap "matsu0228/homebrew-fsrpl"
 tap "AdoptOpenJDK/openjdk"
 
-brew "mas"
-brew "git"
+brew "deno"
+brew "docker", link: false
 brew "fish"
 brew "ghq"
-brew "peco"	
-brew "jq"	
-brew "anyenv"
-brew "yarn"
+brew "git"
+brew "gnupg"
 brew "graphviz"
+brew "jq"
+brew "mas"
+brew "nkf"
+brew "pandoc"
+brew "peco"
+brew "pwgen"
+brew "telnet"
+brew "terminal-notifier"
+brew "watchman"
+brew "yarn"
 
 cask "the-unarchiver"
 cask "dropbox"
@@ -38,4 +45,8 @@ cask "adoptopenjdk"
 
 mas "Slack", id: 803453959
 mas "Amphetamine", id:937984704
-mas "LINE", id:539883307 
+mas "BetterSnapTool", id: 417375580
+mas "Commander One", id: 1035236694
+mas "CotEditor", id: 1024640650
+mas "Edison Mail", id: 1489591003
+mas "Expressions", id: 913158085
