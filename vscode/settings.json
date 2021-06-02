@@ -78,6 +78,5 @@
       "user": "{{put-username-here}}",
       "password": "{{put-password-here}}"
     }
-  ],
-  "window.zoomLevel": 1
+  ]
 }
