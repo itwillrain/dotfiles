@@ -1,6 +1,5 @@
 {
   "workbench.colorTheme": "Dracula",
-  "window.zoomLevel": 0,
   "emmet.triggerExpansionOnTab": true,
   "emmet.variables": {
     "lang": "ja"
@@ -39,7 +38,6 @@
   "scss.validate": false,
   "terminal.integrated.fontSize": 14,
   "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-  "editor.tabSize": 2,
   "terminal.integrated.rendererType": "dom",
   "breadcrumbs.enabled": true,
   "workbench.iconTheme": "vscode-icons",
@@ -60,5 +58,26 @@
   "open-in-browser.default": "chrome",
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "files.associations": {
+    "*.sass": "scss"
+  },
+  "[json]": {
+    "editor.quickSuggestions": {
+      "strings": true
+    },
+    "editor.suggest.insertMode": "replace",
+    "gitlens.codeLens.scopes": [
+      "document"
+    ]
+  },
+  "mssql.connections": [
+    {
+      "server": "{{put-server-name-here}}",
+      "database": "{{put-database-name-here}}",
+      "user": "{{put-username-here}}",
+      "password": "{{put-password-here}}"
+    }
+  ],
+  "window.zoomLevel": 1
 }
