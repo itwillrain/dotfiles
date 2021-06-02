@@ -1,11 +1,11 @@
 # dotfiles
 
 Requirement
-*
+*Home
 
 ## Usage
 
-* home ディレクトリでクローン
+* homeディレクトリでクローン
 
 ```bash
 # home directoryへ
