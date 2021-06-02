@@ -15,9 +15,9 @@ function fish_user_key_bindings
   bind \c] peco_change_directory # Bind for prco change directory to Ctrl+]
 end
 status --is-interactive; and source (anyenv init -|psub)
-# anyenv
-set -x PATH $HOME/.anyenv/bin $PATH
-eval (anyenv init - | source)
 
-# The next line updates PATH for the Google Cloud SDK.
+#  The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/takeshi_matsushita/google-cloud-sdk/path.fish.inc' ]; . '/Users/takeshi_matsushita/google-cloud-sdk/path.fish.inc'; end
+
+#asdf
+source ~/.asdf/asdf.fish
