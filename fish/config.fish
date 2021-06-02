@@ -10,14 +10,15 @@ set -x PATH $ANDROID_HOME/platform-tools $PATH
 set -x PATH $ANDROID_HOME/tools $PATH
 set -x PATH $ANDROID_HOME/tools/bin $PATH
 #peco
-function fish_user_key_bindings
-  bind \cr peco_select_history	
-  bind \c] peco_change_directory # Bind for prco change directory to Ctrl+]
-end
-status --is-interactive; and source (anyenv init -|psub)
+#function fish_user_key_bindings
+#  bind \cr peco_select_history	
+#  bind \c] peco_change_directory # Bind for prco change directory to Ctrl+]
+#end
 
 #  The next line updates PATH for the Google Cloud SDK.
 if [ -f '/Users/takeshi_matsushita/google-cloud-sdk/path.fish.inc' ]; . '/Users/takeshi_matsushita/google-cloud-sdk/path.fish.inc'; end
 
 #asdf
 source ~/.asdf/asdf.fish
+set GHQ_SELECTOR peco
+set GHQ_SELECTOR fzf
