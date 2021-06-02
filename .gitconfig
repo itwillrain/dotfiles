@@ -1,7 +1,7 @@
 [ghq]
 	root = /Users/takeshi_matsushita/gitserver
 [user]
-	name = Takeshi Matsushita
+	name = Matsushita Takeshi
 	email = matsushita@neopa.jp
 [core]
 	excludesfile = /Users/takeshi_matsushita/.gitignore_global
@@ -17,3 +17,8 @@
 	ff = false
 [pull]
 	ff = only
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
