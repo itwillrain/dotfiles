@@ -41,7 +41,7 @@ $ sh ./dotfiles/vscode/restore.sh
 mkdir .config
 
 # シンボリックリンクを貼る
-sh install.sh
+sh link.sh
 
 # Homebrew  をインストール
 sh homebrew_install.sh
