@@ -20,6 +20,8 @@ brew "telnet"
 brew "terminal-notifier"
 brew "watchman"
 brew "yarn"
+brew "fzf"
+brew "asdf"
 
 cask "the-unarchiver"
 cask "dropbox"
