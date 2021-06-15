@@ -11,6 +11,7 @@ coderfee.open-html-in-browser
 CoenraadS.bracket-pair-colorizer
 dariofuzinato.vue-peek
 DavidAnson.vscode-markdownlint
+dbaeumer.jshint
 dbaeumer.vscode-eslint
 deerawan.vscode-dash
 donjayamanne.githistory
@@ -18,6 +19,9 @@ dracula-theme.theme-dracula
 eamodio.gitlens
 eg2.vscode-npm-script
 emeraldwalk.RunOnSave
+Equinusocio.vsc-community-material-theme
+Equinusocio.vsc-material-theme
+equinusocio.vsc-material-theme-icons
 esbenp.prettier-vscode
 fabiospampinato.vscode-todo-plus
 firsttris.vscode-jest-runner
@@ -25,17 +29,18 @@ formulahendry.code-runner
 formulahendry.terminal
 foxundermoon.shell-format
 gerane.Theme-Dark-Dracula
+gerane.Theme-Dracula
 GrapeCity.gc-excelviewer
 GregorBiswanger.json2ts
 HaaLeo.vscode-stylint
 hollowtree.vue-snippets
+HookyQR.beautify
 hridoy.wordpress
 humao.rest-client
 IBM.output-colorizer
 ICS.japanese-proofreading
 jasonnutter.search-node-modules
 jebbs.plantuml
-joelday.docthis
 justjavac.vscode-deno
 kossnocorp.vscode-mjml-template-literal
 loiane.ts-extension-pack

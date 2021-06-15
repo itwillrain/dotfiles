@@ -30,6 +30,7 @@ brew "skhd"
 brew "exa"
 brew "ripgrep"
 brew "fd"
+brew "coreutils"
 
 cask "the-unarchiver"
 cask "dropbox"

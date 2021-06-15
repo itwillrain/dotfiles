@@ -7,6 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "restore:vscode": "sh ~/dotfiles/vscode/restore.sh" ,
     "symlink": "sh link.sh",
+    "vscode:update": "cd vscode && sh restore.sh",
     "dump:vscode:extensions": "code --list-extensions > ~/dotfiles/vscode/extensions",
     "dump:brew": "brew bundle dump --force --file '~/dotfiles/.Brewfile'"
   },

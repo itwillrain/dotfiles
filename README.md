@@ -13,6 +13,24 @@ $ cd
 $ git clone git@github.com:itwillrain/dotfiles.git
 ```
 
+## アプリインストール
+
+---
+
+```bash
+# .configディレクトがなければ作成
+mkdir .config
+
+# シンボリックリンクを貼る
+sh link.sh
+
+# Homebrew  をインストール
+sh homebrew_install.sh
+
+#fish のpathを通す
+sh setup_shell.sh
+```
+
 ## vscode設定
 
 ---
@@ -31,21 +49,3 @@ $ sh ./dotfiles/vscode/restore.sh
 ```
 
 <br>
-
-## アプリインストール
-
----
-
-```bash
-# .configディレクトがなければ作成
-mkdir .config
-
-# シンボリックリンクを貼る
-sh link.sh
-
-# Homebrew  をインストール
-sh homebrew_install.sh
-
-#fish のpathを通す
-sh setup_shell.sh
-```
