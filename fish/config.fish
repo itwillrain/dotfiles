@@ -19,6 +19,8 @@ set -x PATH $ANDROID_HOME/tools/bin $PATH
 if [ -f '/Users/takeshi_matsushita/google-cloud-sdk/path.fish.inc' ]; . '/Users/takeshi_matsushita/google-cloud-sdk/path.fish.inc'; end
 
 #asdf
-source ~/.asdf/asdf.fish
+source /usr/local/opt/asdf/asdf.fish
+
 set GHQ_SELECTOR peco
 set GHQ_SELECTOR fzf
+
