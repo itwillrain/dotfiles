@@ -17,6 +17,7 @@ log() {
     echo 📌 "$message"
 }
 
+# stow commandを利用するため、homebrew installを先に行ってください。
 STOW_PACKAGES_PATH=~/dotfiles/packages
 # Stow packages直下をsymboliclink
 stow -vd "$STOW_PACKAGES_PATH"  -t ~ $(ls $STOW_PACKAGES_PATH)
