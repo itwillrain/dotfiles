@@ -2,6 +2,11 @@
 
 CMDNAME=`basename $0`
 
+log() {
+  message=$1
+  echo 📌 "$message"
+}
+
 while getopts :s OPT
 do
   case $OPT in
@@ -19,13 +24,16 @@ VSCODE_SETTING_DIR=~/Library/Application\ Support/Code/User
 if [ -e "$VSCODE_SETTING_DIR/settings.json" ]; then
   rm "$VSCODE_SETTING_DIR/settings.json"
   ln -s "$SCRIPT_DIR/settings.json" "${VSCODE_SETTING_DIR}/settings.json"
+  log 'Settings Symbolic Link Created'
 fi
 
 if [ -e "$VSCODE_SETTING_DIR/keybindings.json" ]; then
   rm "$VSCODE_SETTING_DIR/keybindings.json"
   ln -s "$SCRIPT_DIR/keybindings.json" "${VSCODE_SETTING_DIR}/keybindings.json"
+  log 'Keybinding Symbolic Link Created'
 fi
 
+# install extenstions
 if [ "$FLG_S" != "TRUE" ]; then
   cat ./extensions | while read line
   do

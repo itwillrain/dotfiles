@@ -1,32 +1,37 @@
 #!/bin/bash
 
+log() {
+    message=$1
+    echo 📌 "$message"
+}
 ### メモ
 #さきにApp storeにログインしておく
-#install.shを実行しておく
+#link.shを実行しておく
 
 ### 不可視ファイルを可視化する(再起動したら見える)
-echo "不可視ファイルを可視化します"
+log "不可視ファイルを可視化します"
 defaults write com.apple.finder AppleShowAllFiles TRUE
 
 ### Command Line Tools
-echo "Command Line Tools for Xcodeのインストールをします"
+log "Command Line Tools for Xcodeのインストールをします"
 xcode-select --install
 
 
 ### homebrew
-echo "homebrewをインストールしています"
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+if ! is_file /usr/local/bin/brew; then
+    log 'Setup Homebrew'
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+fi
 
 ### homebrew-autoupdate
-echo "homebrew autoupdateを実行しています"
+log "homebrew autoupdateを実行しています"
 brew install terminal-notifier
 brew tap domt4/autoupdate
 brew autoupdate --start --upgrade --cleanup --enable-notification
 
-echo "homebrew周りの設定が終了しました"
+log "homebrew周りの設定が終了しました"
 
-### .Brewfileに記載されているアプリをインストール
-echo ".Brewfileに記載されているアプリをインストールします"
-brew bundle --verbose --file '.Brewfile'
+### Brewfileに記載されているアプリをインストール
+log "Brewfileに記載されているアプリをインストールします"
+brew bundle --verbose --file 'Brewfile'
 
-### fishシェルに切り替える

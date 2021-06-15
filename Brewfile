@@ -4,6 +4,7 @@ tap "homebrew/core"
 tap "AdoptOpenJDK/openjdk"
 tap "koekeishiya/formulae"
 
+brew "asdf"
 brew "deno"
 brew "docker", link: false
 brew "fish"
@@ -22,7 +23,6 @@ brew "terminal-notifier"
 brew "watchman"
 brew "yarn"
 brew "fzf"
-brew "asdf"
 brew "gpg"
 brew "gawk"
 brew "yabai"
@@ -31,17 +31,22 @@ brew "exa"
 brew "ripgrep"
 brew "fd"
 brew "coreutils"
+brew "stow"
 
+cask "adoptopenjdk8"
+cask "adoptopenjdk12"
+cask "adoptopenjdk"
+cask "authy"
+cask "dash"
 cask "the-unarchiver"
 cask "dropbox"
 cask "appcleaner"
 cask "openinterminal"
 cask "google-chrome"
 cask "google-japanese-ime"
-cask "authy"
 cask "iterm2"
-cask "dash"
 #cask "charles"
+cask "notion"
 cask "visual-studio-code"
 cask "sketch"
 cask "docker"
@@ -49,15 +54,11 @@ cask "postman"
 cask "adobe-creative-cloud"
 cask "coteditor"
 cask "Karabiner-Elements"
+cask "slack"
+cask "zoom"
 
-cask "adoptopenjdk8"
-cask "adoptopenjdk12"
-cask "adoptopenjdk"
-
-mas "Slack", id: 803453959
 mas "Amphetamine", id:937984704
 mas "BetterSnapTool", id: 417375580
 mas "Commander One", id: 1035236694
-mas "CotEditor", id: 1024640650
 mas "Edison Mail", id: 1489591003
 mas "Expressions", id: 913158085

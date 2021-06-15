@@ -3,6 +3,21 @@
 [user]
 	name = Matsushita Takeshi
 	email = matsushita@neopa.jp
+[alias]
+	s   = status -sb
+	d   = diff
+	a   = add
+	aa  = add -A
+	b   = branch
+	co  = checkout
+	cob = checkout -b
+	c   = commit
+	cm  = commit -m
+	pso = push origin
+	pl  = pullls
+	plo = pull origin
+	f   = fetch
+	fup = fetch upstream
 [core]
 	excludesfile = /Users/takeshi_matsushita/.gitignore_global
 [difftool "sourcetree"]
