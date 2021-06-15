@@ -1,11 +1,14 @@
 # dotfiles
 
-Requirement
-*Home
+Dotfiles managed with
+
+- GNU stow
+- Homebrew Bundle
+- asdf
 
 ## Usage
 
-* homeディレクトリでクローン
+- homeディレクトリでクローン
 
 ```bash
 # home directoryへ
@@ -39,9 +42,9 @@ sh setup_shell.sh
 
 ### vscodeのpathを通す
 
-* vscodeで`command` + `shift` + `P`
-* `PATH`を選択
-* shellコマンドでPATH内にcodeコマンドをインストール
+- vscodeで`command` + `shift` + `P`
+- `PATH`を選択
+- shellコマンドでPATH内にcodeコマンドをインストール
 
 ```bash
 # vscode設定
