@@ -1,84 +1,104 @@
-###########################################################
-# Layout
-###########################################################
+#------------------------------------------------------------
+# モニター操作
+#------------------------------------------------------------
+# モニターを選択する
+ctrl + cmd - j  : yabai -m display --focus 1
+ctrl + cmd - k  : yabai -m display --focus 2
 
-alt - f : yabai -m space --layout float
-# Toggle between bsp and stack
-alt + shift - space : [ "$(yabai -m query --spaces --space | jq -r '.type')" = bsp ] \
-    && yabai -m space --layout stack \
-    || yabai -m space --layout bsp
+# ウィンドウをモニターに移動する
+ctrl + cmd - 1  : yabai -m window --display 1; yabai -m display --focus 1
+ctrl + cmd - 2  : yabai -m window --display 2; yabai -m display --focus 2
 
-###########################################################
-# Window
-###########################################################
+#------------------------------------------------------------
+# ウィンドウの選択・操作
+#------------------------------------------------------------
+# ウィンドウを選択する
+cmd - j : yabai -m window --focus prev
+cmd - k : yabai -m window --focus next
 
-# insert mode
-alt - i : yabai -m window --insert east
-alt + shift - i : yabai -m window --insert south
+# ウィンドウを入れ替える
+ctrl + cmd - b : yabai -m window --swap west
+ctrl + cmd - n : yabai -m window --swap south
+ctrl + cmd - p : yabai -m window --swap north
+ctrl + cmd - f : yabai -m window --swap east
 
-# Applications
-alt - return : alacritty --working-directory $HOME/projects/github.com/JunichiSugiura
-alt - 0 : open -n /Applications/Brave\ Browser.app
-alt + shift - n : open /Applications/Notion.app
+# オフセット有無
+alt - a : yabai -m space --toggle padding; yabai -m space --toggle gap
 
-# close
-alt - c : yabai -m window --close
+#------------------------------------------------------------
+# ウィンドウのサイズ調整
+#------------------------------------------------------------
+# ウィンドウサイズを全て等しくする
+shift + cmd - 0 : yabai -m space --balance
 
-# navigate
-alt - k : yabai -m window --focus stack.prev \
-    || yabai -m window --focus prev
-alt - j : yabai -m window --focus stack.next \
-    || yabai -m window --focus next
-alt - tab : yabai -m window --focus stack.recent \
-    || yabai -m window --focus recent
+# ウィンドウを移動する
+shift + ctrl - a : yabai -m window --move rel:-20:0
+shift + ctrl - s : yabai -m window --move rel:0:20
+shift + ctrl - w : yabai -m window --move rel:0:-20
+shift + ctrl - d : yabai -m window --move rel:20:0
 
-# mirror
-alt - m : yabai -m space --mirror y-axis \
-    && yabai -m window --focus first
+# ウィンドウのサイズを増やす
+shift + alt - a : yabai -m window --resize left:-20:0
+shift + alt - s : yabai -m window --resize bottom:0:20
+shift + alt - w : yabai -m window --resize top:0:-20
+shift + alt - d : yabai -m window --resize right:20:0
 
-# rotate
-alt - r : yabai -m space --rotate 270
+# ウィンドウのサイズを減らす
+shift + cmd - a : yabai -m window --resize left:20:0
+shift + cmd - s : yabai -m window --resize bottom:0:-20
+shift + cmd - w : yabai -m window --resize top:0:20
+shift + cmd - d : yabai -m window --resize right:-20:0
 
-# warp
-alt + shift - k : yabai -m window --warp prev
-alt + shift - j : yabai -m window --warp next
+# set insertion point in focused container
+ctrl + alt - h : yabai -m window --insert west
+ctrl + alt - j : yabai -m window --insert south
+ctrl + alt - k : yabai -m window --insert north
+ctrl + alt - l : yabai -m window --insert east
 
-# full screen
-alt - space : yabai -m window --toggle zoom-fullscreen
 
-# resize
-alt + shift - 0x21 : yabai -m window --resize left:-40:0 \
-    || yabai -m window --resize right:-40:0
-alt + shift - 0x1E : yabai -m window --resize right:40:0 \
-    || yabai -m window --resize left:40:0
+#------------------------------------------------------------
+# レイアウトの設定
+#------------------------------------------------------------
+# レイアウト変更
+ctrl + alt - b : yabai -m space --layout bsp
+ctrl + alt - f : yabai -m space --layout float
 
-###########################################################
-# Display
-###########################################################
+# ----------------------------------------------------------
+#   float 時のレイアウト操作
+# ----------------------------------------------------------
+# ウィンドウを移動する(Float時のみ)
 
-# navigate
-alt - 0x2B : yabai -m display --focus prev \
-    && yabai -m display --focus stack.prev
-alt - 0x2F : yabai -m display --focus next \
-    && yabai -m display --focus stack.next
 
-###########################################################
-# Space
-###########################################################
+# フルスクリーンにする
+ctrl + alt - 0x24 : yabai -m window --grid 1:1:0:0:1:1
 
-# send window
-shift + alt - 0x2B : yabai -m window --display prev \
-    && yabai -m display --focus prev
-shift + alt - 0x2F : yabai -m window --display next \
-    && yabai -m display --focus next
+# 左半分にする
+ctrl + alt - left   : yabai -m window --grid 1:2:0:0:1:1
 
-# toggle mission control
-shift + alt - m : yabai -m space --toggle mission-control
+# 右半分にする
+ctrl + alt - right  : yabai -m window --grid 1:2:1:0:1:1
 
-# reset split balance
-shift + alt - e : yabai -m space --balance
+#------------------------------------------------------------
+#   bsp 時のレイアウト操作
+#------------------------------------------------------------
+# ウインドウの並びを回転する
+alt - r : yabai -m space --rotate 90
 
-###########################################################
-# Stackline
-###########################################################
-# shift + alt - b : hs -c 'stackline.config:toggle("appearance.showIcons")'
+# Y軸方向で反転する
+alt - y : yabai -m space --mirror y-axis
+
+# Y軸方向で反転する
+alt - x : yabai -m space --mirror x-axis
+
+# 親レイアウト方向で伸ばす
+alt - d : yabai -m window --toggle zoom-parent
+
+# フルスクリーンにする
+alt - f : yabai -m window --toggle zoom-fullscreen
+
+# 縦分割にする
+alt - e : yabai -m window --toggle split
+
+# 画面中央に表示する
+alt - t : yabai -m window --toggle float;\
+          yabai -m window --grid 12:12:1:1:10:10
