@@ -55,6 +55,7 @@ cask "adobe-creative-cloud"
 cask "coteditor"
 cask "Karabiner-Elements"
 cask "slack"
+cask "sourcetree"
 cask "zoom"
 
 mas "Amphetamine", id:937984704
