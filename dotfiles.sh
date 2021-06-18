@@ -21,6 +21,15 @@ log() {
     echo 📌 "$message"
 }
 
+for i in "$@"; do
+    case "$i" in
+        -s|--skip-apps)
+            skip_apps=1
+            shift ;;
+        *) ;;
+    esac
+done
+
 ### メモ
 #さきにApp storeにログインしておく
 #link.shを実行しておく
@@ -40,17 +49,47 @@ if ! is_file /usr/local/bin/brew; then
     /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 fi
 
-### homebrew-autoupdate
-log "homebrew autoupdateを実行しています"
-brew install terminal-notifier
-brew tap domt4/autoupdate
-brew autoupdate --start --upgrade --cleanup --enable-notification
+if [ ! "$skip_apps" ]; then
 
-log "homebrew周りの設定が終了しました"
+    ### homebrew-autoupdate
+    log "homebrew autoupdateを実行しています"
+    brew install terminal-notifier
+    brew tap domt4/autoupdate
+    brew autoupdate --start --upgrade --cleanup --enable-notification
 
-### Brewfileに記載されているアプリをインストール
-log "Brewfileに記載されているアプリをインストールします"
-brew bundle --verbose --file 'Brewfile'
+    log "homebrew周りの設定が終了しました"
+    ### Brewfileに記載されているアプリをインストール
+    log "Brewfileに記載されているアプリをインストールします"
+    brew bundle --verbose --file 'Brewfile'
+fi
+
+### .configがなければ作成
+config_dir=~/.config
+if ! is_dir "$config_dir"; then
+    log ".configディレクトリを作成します"
+    mkdir $config_dir
+fi
+
+### asdf Install Script
+for plugin in $(awk '{print $1}' ~/.tool-versions); do
+    if ! is_dir ~/.asdf/plugins/"$plugin"; then
+        asdf plugin add "$plugin"
+    fi
+done
+
+is_runtime_versions_changed () {
+    plugin="$1"
+    specified=$(grep "$plugin" ~/.tool-versions | awk '{$1=""; print $0}')
+    installed=$(asdf list "$plugin" 2>&1)
+
+    is_changed=
+    for version in $specified; do
+        match=$(echo "$installed" | grep "$version")
+        [ -z "$match" ] && is_changed=1
+    done
+
+    [ "$is_changed" ]
+}
 
 # Stow commandを利用するため、homebrew installを先に行ってください。
 STOW_PACKAGES_PATH=~/dotfiles/packages
