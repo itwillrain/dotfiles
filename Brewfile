@@ -32,6 +32,7 @@ brew "ripgrep"
 brew "fd"
 brew "coreutils"
 brew "stow"
+brew "bat"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
