@@ -16,7 +16,7 @@ set -x PATH $ANDROID_HOME/tools/bin $PATH
 #end
 
 #  The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/takeshi_matsushita/google-cloud-sdk/path.fish.inc' ]; . '/Users/takeshi_matsushita/google-cloud-sdk/path.fish.inc'; end
+if [ -f '$HOME/google-cloud-sdk/path.fish.inc' ]; . '$HOME/google-cloud-sdk/path.fish.inc'; end
 
 #asdf
 source /usr/local/opt/asdf/asdf.fish
