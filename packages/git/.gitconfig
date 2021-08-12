@@ -1,5 +1,5 @@
 [ghq]
-    root = $HOME/gitserver
+    root = ~/gitserver
 [user]
     name = Matsushita Takeshi
     email = matsushitatakeshi@team-lab.com
@@ -25,7 +25,7 @@
     cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
     trustExitCode = true
 [commit]
-    template = $HOME/.commit_template
+    template = ~/.commit_template
 [pull]
     rebase = false
 [init]
