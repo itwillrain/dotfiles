@@ -1,8 +1,8 @@
 [ghq]
     root = $HOME/gitserver
 [user]
-    name = matsushita takeshi
-    email = info.itwillrain@gmail.com
+    name = Matsushita Takeshi
+    email = matsushitatakeshi@team-lab.com
 [alias]
     s = status -sb
     d = diff
