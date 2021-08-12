@@ -21,14 +21,8 @@ $ git clone git@github.com:itwillrain/dotfiles.git
 ---
 
 ```bash
-# .configディレクトがなければ作成
-mkdir .config
-
 # シンボリックリンクを貼る
-sh link.sh
-
-# Homebrew  をインストール
-sh homebrew_install.sh
+sh dotfiles.sh
 
 #fish のpathを通す
 sh setup_shell.sh
