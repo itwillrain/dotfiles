@@ -28,7 +28,8 @@
   },
   "editor.fontFamily": "Source Code Pro for Powerline, Meslo LG M DZ for Powerline, Menlo, Monaco, 'Courier New', monospace, ",
   "editor.fontWeight": "500",
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
   "javascript.validate.enable": false,
   "javascript.format.enable": false,
   "vetur.validation.template": false,
@@ -36,9 +37,7 @@
   "css.validate": false,
   "less.validate": false,
   "scss.validate": false,
-  "terminal.integrated.fontSize": 14,
-  "terminal.integrated.shell.osx": "/usr/local/bin/fish",
-  "terminal.integrated.rendererType": "dom",
+  "terminal.integrated.fontSize": 12,
   "breadcrumbs.enabled": true,
   "workbench.iconTheme": "vscode-icons",
   "editor.suggestSelection": "first",
@@ -52,9 +51,8 @@
   "git.autofetch": true,
   "editor.minimap.enabled": false,
   "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
-  "editor.fontSize": 14,
-  "settingsSync.ignoredSettings": [
-  ],
+  "editor.fontSize": 12,
+  "settingsSync.ignoredSettings": [],
   "open-in-browser.default": "chrome",
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -67,16 +65,16 @@
       "strings": true
     },
     "editor.suggest.insertMode": "replace",
-    "gitlens.codeLens.scopes": [
-      "document"
-    ]
+    "gitlens.codeLens.scopes": ["document"]
   },
-  "mssql.connections": [
-    {
-      "server": "{{put-server-name-here}}",
-      "database": "{{put-database-name-here}}",
-      "user": "{{put-username-here}}",
-      "password": "{{put-password-here}}"
-    }
-  ]
+  "editor.tabSize": 2,
+  "editor.accessibilitySupport": "off"
+  // "mssql.connections": [
+  //   {
+  //     "server": "{{put-server-name-here}}",
+  //     "database": "{{put-database-name-here}}",
+  //     "user": "{{put-username-here}}",
+  //     "password": "{{put-password-here}}"
+  //   }
+  // ]
 }
