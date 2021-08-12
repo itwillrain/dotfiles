@@ -32,7 +32,7 @@ sh setup_shell.sh
 
 ---
 
-※vscodeの`code`comandが必須
+※vscodeの`code`commandが必須
 
 ### vscodeのpathを通す
 
