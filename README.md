@@ -24,7 +24,7 @@ $ git clone git@github.com:itwillrain/dotfiles.git
 # シンボリックリンクを貼る
 sh dotfiles.sh
 
-#fish のpathを通す
+#fishのpathを通す
 sh setup_shell.sh
 ```
 
