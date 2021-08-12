@@ -1,25 +1,23 @@
 [ghq]
-	root = /Users/takeshi_matsushita/gitserver
+    root = $HOME/gitserver
 [user]
-	name = Matsushita Takeshi
-	email = matsushita@neopa.jp
+	name = matsushita takeshi
+    email = matsushitatakeshi@team-lab.com
 [alias]
-	s   = status -sb
-	d   = diff
-	a   = add
-	aa  = add -A
-	b   = branch
-	co  = checkout
-	cob = checkout -b
-	c   = commit
-	cm  = commit -m
-	pso = push origin
-	pl  = pullls
-	plo = pull origin
-	f   = fetch
-	fup = fetch upstream
-[core]
-	excludesfile = /Users/takeshi_matsushita/.gitignore_global
+    s = status -sb
+    d = diff
+    a = add
+    aa = add -A
+    b = branch
+    co = checkout
+    cob = checkout -b
+    c = commit
+    cm = commit -m
+    pso = push origin
+    pl = pullls
+    plo = pull origin
+    f = fetch
+    fup = fetch upstream
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
 	path = 
@@ -27,13 +25,13 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-	template = /Users/takeshi_matsushita/.commit_template
-[merge]
-	ff = false
+    template = $HOME/.commit_template
 [pull]
-	ff = only
+	rebase = false
+[init]
+	defaultBranch = main
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
