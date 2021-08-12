@@ -26,6 +26,7 @@
 	trustExitCode = true
 [commit]
     template = ~/.commit_template
+    cleanup = strip
 [pull]
     rebase = false
 [init]
