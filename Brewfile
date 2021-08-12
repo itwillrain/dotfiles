@@ -59,6 +59,3 @@ cask "Karabiner-Elements"
 cask "sourcetree"
 cask "zoom"
 
-#mas "Commander One", id: 1035236694
-#mas "Edison Mail", id: 1489591003
-#mas "Expressions", id: 913158085
