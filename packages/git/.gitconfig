@@ -1,8 +1,8 @@
 [ghq]
     root = $HOME/gitserver
 [user]
-	name = matsushita takeshi
-    email = matsushitatakeshi@team-lab.com
+    name = matsushita takeshi
+    email = info.itwillrain@gmail.com
 [alias]
     s = status -sb
     d = diff
@@ -19,17 +19,17 @@
     f = fetch
     fup = fetch upstream
 [difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+    cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+    path =
 [mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+    cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+    trustExitCode = true
 [commit]
     template = $HOME/.commit_template
 [pull]
-	rebase = false
+    rebase = false
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [filter "lfs"]
     clean = git-lfs clean -- %f
     smudge = git-lfs smudge -- %f
