@@ -18,3 +18,6 @@ source /usr/local/opt/asdf/asdf.fish
 
 set GHQ_SELECTOR fzf
 
+#bobthefish
+set -g theme_nerd_fonts yes
+set -g theme_color_scheme dracula
