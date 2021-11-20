@@ -33,6 +33,7 @@ brew "fd"
 brew "coreutils"
 brew "stow"
 brew "bat"
+brew "gh"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
