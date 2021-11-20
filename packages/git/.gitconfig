@@ -1,8 +1,8 @@
 [ghq]
     root = ~/gitserver
 [user]
-    name = Matsushita Takeshi
-    email = matsushitatakeshi@team-lab.com
+	name = Matsushita Takeshi
+	email = matsushitatakeshi@team-lab.com
 [alias]
     s = status -sb
     d = diff
@@ -25,7 +25,7 @@
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
 [commit]
-    template = ~/.commit_template
+	template = ~/.commit_template
     cleanup = strip
 [pull]
     rebase = false
