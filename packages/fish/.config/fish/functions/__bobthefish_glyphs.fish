@@ -63,7 +63,7 @@ function __bobthefish_glyphs -S -d 'Define glyphs used by bobthefish'
   if [ "$theme_nerd_fonts" = "yes" ]
     set private_glyph    \uF023 ' ' # nf-fa-lock
 
-    set branch_glyph     \uF418
+    set branch_glyph     \uf113
     set detached_glyph   \uF417
     set tag_glyph        \uF412
 
