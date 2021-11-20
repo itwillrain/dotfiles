@@ -34,6 +34,7 @@ brew "stow"
 brew "bat"
 brew "gh"
 brew "lsd"
+brew "tig"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
