@@ -16,6 +16,5 @@ if [ -f '$HOME/google-cloud-sdk/path.fish.inc' ]; . '$HOME/google-cloud-sdk/path
 #asdf
 source /usr/local/opt/asdf/asdf.fish
 
-set GHQ_SELECTOR peco
 set GHQ_SELECTOR fzf
 
