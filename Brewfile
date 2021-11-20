@@ -34,6 +34,7 @@ brew "coreutils"
 brew "stow"
 brew "bat"
 brew "gh"
+brew "lsd"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
