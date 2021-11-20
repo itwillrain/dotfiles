@@ -18,7 +18,6 @@ $ git clone git@github.com:itwillrain/dotfiles.git
 
 ## アプリインストール
 
-
 ---
 
 ```bash
