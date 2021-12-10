@@ -22,3 +22,7 @@ set GHQ_SELECTOR fzf
 set -g theme_nerd_fonts yes
 set -g theme_display_git_default_branch yes
 set -g theme_color_scheme dracula
+
+# fzf
+set fzf_preview_dir_cmd lsd --all  --color = always
+fzf_configure_bindings --directory=\cf --git_status=\cs
