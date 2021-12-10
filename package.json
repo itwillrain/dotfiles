@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "install:dotfiles": "sh dotfiles.sh",
-    "link": "sh dotfiles.sh -s",
+    "symlink": "sh dotfiles.sh -s",
     "restore:vscode": "sh ~/dotfiles/vscode/restore.sh" ,
     "vscode:update": "cd vscode && sh restore.sh",
     "dump:vscode:extensions": "code --list-extensions > ~/dotfiles/vscode/extensions",
