@@ -35,6 +35,7 @@ brew "bat"
 brew "gh"
 brew "lsd"
 brew "tig"
+brew "neovim"
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
