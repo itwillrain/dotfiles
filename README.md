@@ -21,8 +21,11 @@ $ git clone git@github.com:itwillrain/dotfiles.git
 ---
 
 ```bash
-# シンボリックリンクを貼る
+# dotfilesから設定する
 sh dotfiles.sh
+
+# Brewの設定をスキップ(symbolic linkを行う)
+sh dotfiles.sh -s 
 
 #fishのpathを通す
 sh setup_shell.sh
