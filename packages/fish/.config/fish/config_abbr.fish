@@ -30,6 +30,9 @@ abbr dcs 'docker-compose stop'
 # Docker Machine
 abbr dm 'docker-machine'
 
+# Find
+abbr find 'fd'
+
 # Grep
 abbr grep 'rg'
 
@@ -88,9 +91,15 @@ abbr gfhp 'git flow hotfix publish'
 abbr gfht 'git flow hotfix track'
 abbr gfhco 'git flow hotfix checkout'
 
+# History
+abbr h 'history'
+
+# vhosts
+abbr hosts='sudo vim /etc/hosts'
+
 # LS
-abbr l 'ls'
-abbr ll 'ls -al'
+abbr l 'lsd'
+abbr ll 'lsd -alF'
 abbr ls 'lsd'
 
 # MV
@@ -113,6 +122,9 @@ abbr rm 'rm -i'
 
 # Tig
 abbr t 'tig'
+abbr tis 'tig status'
+abbr til 'tig log'
+abbr tib 'tig blame -C'
 
 # Vim
 abbr vim 'nvim'
@@ -120,3 +132,8 @@ abbr vi 'nvim'
 
 # Yarn
 abbr y 'yarn'
+abbr ya "yarn add"
+abbr ycc "yarn cache clean"
+abbr yh "yarn help"
+abbr yo "yarn outdated"
+abbr yui "yarn upgrade-interactive"
