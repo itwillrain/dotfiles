@@ -98,7 +98,7 @@ abbr gfhco 'git flow hotfix checkout'
 abbr h 'history'
 
 # vhosts
-abbr hosts='sudo vim /etc/hosts'
+abbr hosts 'sudo vim /etc/hosts'
 
 # LS
 abbr l 'lsd'
