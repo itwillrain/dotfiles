@@ -1,26 +1,37 @@
-# LS
-abbr l 'ls'
-
-# NPM
-abbr ni 'npm install'
-abbr nis 'npm install --save'
-abbr nisd 'npm install --save-dev'
-abbr nig 'npm install -g'
-abbr np 'npm prune'
-abbr nl 'npm list'
-abbr nr 'npm remove'
-abbr nu 'npm update'
-abbr ns 'npm start'
-abbr nt 'npm test'
-
-# Yarn
-abbr y 'yarn'
-
-# clear
+# Clear
 abbr c 'clear'
 
-#Tig
-abbr t 'tig'
+# CP
+abbr cp 'cp -i'
+
+# Cat
+abbr cat 'bat'
+
+# Docker
+abbr d 'docker'
+abbr dim 'docker images'
+abbr dpsa 'dps -a'
+abbr drma 'docker rm (docker ps -aq)' # delete all stopped containers
+abbr drml 'docker rm (docker ps -lq)' # delete last container
+abbr dsa 'docker stop (docker ps -aq)' # stop all containers
+abbr dsl 'docker stop (docker ps -lq)' # stop last container
+abbr drmdi 'docker rmi (docker images -qf dangling=true)' # delete dangling images
+abbr digrep 'docker-images' # grep through images
+abbr dgrep 'docker-grep' # grep through containers
+abbr drmg 'docker rm (docker-grep'
+abbr dcl 'docker rm (docker ps -aq); docker rmi (docker images -qf dangling=true)' # clean
+abbr de 'docker exec'
+
+# Docker Compose
+abbr dc 'docker-compose'
+abbr dcu 'docker-compose up -d'
+abbr dcs 'docker-compose stop'
+
+# Docker Machine
+abbr dm 'docker-machine'
+
+# Grep
+abbr grep 'rg'
 
 # Git
 abbr g 'git'
@@ -76,3 +87,36 @@ abbr gfhf 'git flow hotfix finish'
 abbr gfhp 'git flow hotfix publish'
 abbr gfht 'git flow hotfix track'
 abbr gfhco 'git flow hotfix checkout'
+
+# LS
+abbr l 'ls'
+abbr ll 'ls -al'
+abbr ls 'lsd'
+
+# MV
+abbr mv 'mv -i'
+
+# NPM
+abbr ni 'npm install'
+abbr nis 'npm install --save'
+abbr nisd 'npm install --save-dev'
+abbr nig 'npm install -g'
+abbr np 'npm prune'
+abbr nl 'npm list'
+abbr nr 'npm remove'
+abbr nu 'npm update'
+abbr ns 'npm start'
+abbr nt 'npm test'
+
+# RM
+abbr rm 'rm -i'
+
+# Tig
+abbr t 'tig'
+
+# Vim
+abbr vim 'nvim'
+abbr vi 'nvim'
+
+# Yarn
+abbr y 'yarn'
