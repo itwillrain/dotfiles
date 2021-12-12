@@ -7,6 +7,9 @@ abbr cp 'cp -i'
 # Cat
 abbr cat 'bat'
 
+# Dotfile
+abbr dot 'cd ~/dotfiles'
+
 # Docker
 abbr d 'docker'
 abbr dim 'docker images'
