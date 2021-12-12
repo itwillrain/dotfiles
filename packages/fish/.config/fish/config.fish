@@ -26,3 +26,6 @@ set -g theme_color_scheme dracula
 # fzf
 set fzf_preview_dir_cmd lsd --all  --color = always
 fzf_configure_bindings --directory=\cf --git_status=\cs
+
+# fish abbr
+source "$HOME/.config/fish/config_abbr.fish"
