@@ -36,6 +36,7 @@ brew "gh"
 brew "lsd"
 brew "tig"
 brew "neovim"
+brew "tokei"s
 
 cask "adoptopenjdk8"
 cask "adoptopenjdk12"
