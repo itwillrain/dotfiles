@@ -102,7 +102,8 @@ abbr hosts 'sudo vim /etc/hosts'
 
 # LS
 abbr l 'lsd'
-abbr ll 'lsd -alF'
+abbr la 'lsd -a'
+abbr ll 'lsd -l'
 abbr ls 'lsd'
 
 # MV
