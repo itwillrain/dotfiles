@@ -1,1 +1,3 @@
+# Bind Settings
 bind status P !git push origin
+bind branch L !git pull origin %(branch)
