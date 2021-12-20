@@ -68,5 +68,8 @@
     "gitlens.codeLens.scopes": ["document"]
   },
   "editor.tabSize": 2,
-  "editor.accessibilitySupport": "off"
+  "editor.accessibilitySupport": "off",
+  "hediet.vscode-drawio.offline": false,
+  "hediet.vscode-drawio.codeLinkActivated": false,
+  "bracketPairColorizer.depreciation-notice": false
 }
