@@ -7,6 +7,9 @@ bind generic P ?git push -u %(remote) %(repo:head)
 # UでPull
 bind generic U ?git pull %(remote)
 
+# 差分の前後の表示行数（diff-context)を指定
+set diff-context = 4
+
 # color default         white   black
 color   cursor          black   green
 color   search-result   black   yellow
