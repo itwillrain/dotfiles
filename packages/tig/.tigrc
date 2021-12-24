@@ -7,6 +7,17 @@ bind generic P ?git push -u %(remote) %(repo:head)
 # UでPull
 bind generic U ?git pull %(remote)
 
+# S で stash save
+bind generic S      ?git stash save "%(prompt Enter stash comment: )"
+
+# Y で stash pop
+bind diff    Y      ?git stash pop %(stash)
+bind stash   Y      ?git stash pop %(stash)
+
+# Alt-y で stash apply
+bind diff    <Esc>y ?git stash apply %(stash)
+bind stash   <Esc>y ?git stash apply %(stash)
+
 # 差分の前後の表示行数（diff-context)を指定
 set diff-context = 4
 
