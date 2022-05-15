@@ -1,75 +1,79 @@
 {
-  "workbench.colorTheme": "Dracula",
-  "emmet.triggerExpansionOnTab": true,
-  "emmet.variables": {
-    "lang": "ja"
+  "editor.suggestSelection" : "first",
+  "workbench.startupEditor" : "newUntitledFile",
+  "vetur.format.defaultFormatter.html" : "none",
+  "breadcrumbs.enabled" : true,
+  "javascript.validate.enable" : false,
+  "editor.codeActionsOnSave" : {
+    "source.fixAll.markdownlint" : true,
+    "source.fixAll.eslint" : true
   },
-  "workbench.colorCustomizations": {
-    "activityBarBadge.background": "#FF4081",
-    "list.activeSelectionForeground": "#FF4081",
-    "list.inactiveSelectionForeground": "#FF4081",
-    "list.highlightForeground": "#FF4081",
-    "scrollbarSlider.activeBackground": "#FF408150",
-    "editorSuggestWidget.highlightForeground": "#FF4081",
-    "textLink.foreground": "#FF4081",
-    "progressBar.background": "#FF4081",
-    "pickerGroup.foreground": "#FF4081",
-    "tab.activeBorder": "#FF4081",
-    "notificationLink.foreground": "#FF4081",
-    "editorWidget.resizeBorder": "#FF4081",
-    "editorWidget.border": "#FF4081",
-    "settings.modifiedItemIndicator": "#FF4081",
-    "settings.modifiedItemForeground": "#FF4081",
-    "settings.headerForeground": "#FF4081",
-    "panelTitle.activeBorder": "#FF4081",
-    "breadcrumb.activeSelectionForeground": "#FF4081",
-    "menu.selectionForeground": "#FF4081",
-    "menubar.selectionForeground": "#FF4081"
+  "editor.minimap.enabled" : false,
+  "workbench.colorCustomizations" : {
+    "settings.headerForeground" : "#FF4081",
+    "menu.selectionForeground" : "#FF4081",
+    "textLink.foreground" : "#FF4081",
+    "menubar.selectionForeground" : "#FF4081",
+    "pickerGroup.foreground" : "#FF4081",
+    "editorSuggestWidget.highlightForeground" : "#FF4081",
+    "scrollbarSlider.activeBackground" : "#FF408150",
+    "progressBar.background" : "#FF4081",
+    "notificationLink.foreground" : "#FF4081",
+    "panelTitle.activeBorder" : "#FF4081",
+    "breadcrumb.activeSelectionForeground" : "#FF4081",
+    "settings.modifiedItemIndicator" : "#FF4081",
+    "list.highlightForeground" : "#FF4081",
+    "list.activeSelectionForeground" : "#FF4081",
+    "list.inactiveSelectionForeground" : "#FF4081",
+    "editorWidget.resizeBorder" : "#FF4081",
+    "activityBarBadge.background" : "#FF4081",
+    "editorWidget.border" : "#FF4081",
+    "settings.modifiedItemForeground" : "#FF4081",
+    "tab.activeBorder" : "#FF4081"
   },
-  "editor.fontFamily": "Source Code Pro for Powerline, Meslo LG M DZ for Powerline, Menlo, Monaco, 'Courier New', monospace, ",
-  "editor.fontWeight": "500",
-  "editor.formatOnSave": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "javascript.validate.enable": false,
-  "javascript.format.enable": false,
-  "vetur.validation.template": false,
-  "vetur.format.defaultFormatter.html": "none",
-  "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false,
-  "terminal.integrated.fontSize": 12,
-  "breadcrumbs.enabled": true,
-  "workbench.iconTheme": "vscode-icons",
-  "editor.suggestSelection": "first",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-  "workbench.startupEditor": "newUntitledFile",
-  "vsicons.dontShowNewVersionMessage": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true,
-    "source.fixAll.markdownlint": true
-  },
-  "git.autofetch": true,
-  "editor.minimap.enabled": false,
-  "terminal.integrated.fontFamily": "Source Code Pro for Powerline",
-  "editor.fontSize": 12,
-  "settingsSync.ignoredSettings": [],
-  "open-in-browser.default": "chrome",
-  "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "files.associations": {
-    "*.sass": "scss"
-  },
-  "[json]": {
-    "editor.quickSuggestions": {
-      "strings": true
+  "open-in-browser.default" : "chrome",
+  "workbench.iconTheme" : "vscode-icons",
+  "workbench.colorTheme" : "SynthWave '84",
+  "editor.defaultFormatter" : "esbenp.prettier-vscode",
+  "terminal.integrated.fontFamily" : "Source Code Pro for Powerline",
+  "hediet.vscode-drawio.codeLinkActivated" : false,
+  "[json]" : {
+    "gitlens.codeLens.scopes" : [
+      "document"
+    ],
+    "editor.quickSuggestions" : {
+      "strings" : true
     },
-    "editor.suggest.insertMode": "replace",
-    "gitlens.codeLens.scopes": ["document"]
+    "editor.suggest.insertMode" : "replace"
   },
-  "editor.tabSize": 2,
-  "editor.accessibilitySupport": "off",
-  "hediet.vscode-drawio.offline": false,
-  "hediet.vscode-drawio.codeLinkActivated": false,
-  "bracketPairColorizer.depreciation-notice": false
+  "css.validate" : false,
+  "[vue]" : {
+    "editor.defaultFormatter" : "esbenp.prettier-vscode"
+  },
+  "vsintellicode.modify.editor.suggestSelection" : "automaticallyOverrodeDefaultValue",
+  "git.autofetch" : true,
+  "editor.tabSize" : 2,
+  "vetur.validation.template" : false,
+  "javascript.format.enable" : false,
+  "bracketPairColorizer.depreciation-notice" : false,
+  "editor.formatOnSave" : true,
+  "scss.validate" : false,
+  "files.associations" : {
+    "*.sass" : "scss"
+  },
+  "editor.accessibilitySupport" : "off",
+  "emmet.variables" : {
+    "lang" : "ja"
+  },
+  "editor.fontFamily" : "Source Code Pro for Powerline, Meslo LG M DZ for Powrline, Menlo, Monaco, 'Courier New', monospace, ",
+  "less.validate" : false,
+  "terminal.integrated.fontSize" : 12,
+  "hediet.vscode-drawio.offline" : false,
+  "editor.fontSize" : 12,
+  "vsicons.dontShowNewVersionMessage" : true,
+  "settingsSync.ignoredSettings" : [
+
+  ],
+  "editor.fontWeight" : "500",
+  "emmet.triggerExpansionOnTab" : true
 }
