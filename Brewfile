@@ -61,4 +61,6 @@ cask "coteditor"
 cask "Karabiner-Elements"
 cask "sourcetree"
 cask "zoom"
+cask "warp"
+cask "fig"
 
