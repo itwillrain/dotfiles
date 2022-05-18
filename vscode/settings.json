@@ -32,7 +32,7 @@
     "tab.activeBorder": "#FF4081"
   },
   "open-in-browser.default": "chrome",
-  "workbench.iconTheme": "vscode-icons",
+  "workbench.iconTheme": "material-icon-theme",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.integrated.fontFamily": "SauceCodePro Nerd Font Mono",
   "hediet.vscode-drawio.codeLinkActivated": false,
