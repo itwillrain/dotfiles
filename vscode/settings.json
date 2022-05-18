@@ -33,7 +33,6 @@
   },
   "open-in-browser.default": "chrome",
   "workbench.iconTheme": "vscode-icons",
-  "workbench.colorTheme": "SynthWave '84",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.integrated.fontFamily": "SauceCodePro Nerd Font Mono",
   "hediet.vscode-drawio.codeLinkActivated": false,
@@ -71,5 +70,9 @@
   "vsicons.dontShowNewVersionMessage": true,
   "settingsSync.ignoredSettings": [],
   "editor.fontWeight": "500",
-  "emmet.triggerExpansionOnTab": true
+  "emmet.triggerExpansionOnTab": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "workbench.colorTheme": "SynthWave '84"
 }
