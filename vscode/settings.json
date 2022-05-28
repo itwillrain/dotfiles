@@ -74,5 +74,6 @@
   "terminal.integrated.env.osx": {
     "FIG_NEW_SESSION": "1"
   },
-  "workbench.colorTheme": "SynthWave '84"
+  "workbench.colorTheme": "SynthWave '84",
+  "workbench.sideBar.location": "right"
 }
