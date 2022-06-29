@@ -75,5 +75,8 @@
     "FIG_NEW_SESSION": "1"
   },
   "workbench.colorTheme": "SynthWave '84",
-  "workbench.sideBar.location": "right"
+  "workbench.sideBar.location": "right",
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
 }
