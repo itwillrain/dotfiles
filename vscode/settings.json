@@ -76,7 +76,9 @@
   },
   "workbench.colorTheme": "SynthWave '84",
   "workbench.sideBar.location": "right",
-  "[ignore]": {
+  "[ignore]": { 
     "editor.defaultFormatter": "foxundermoon.shell-format"
-  }
+  },
+  "editor.cursorSmoothCaretAnimation": true,
+  "diffEditor.ignoreTrimWhitespace": false,
 }
