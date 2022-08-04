@@ -65,7 +65,7 @@ EOF
 }
 
 # install powerline fonts
-powerline_font() {
+powerline_fonts() {
   git clone --depth=1 https://github.com/powerline/fonts.git
   cd fonts
   ./install.sh
