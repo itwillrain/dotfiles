@@ -8,7 +8,7 @@
     "install:dotfiles": "sh dotfiles.sh",
     "symlink": "sh dotfiles.sh -s",
     "restore:vscode": "sh ~/dotfiles/vscode/restore.sh" ,
-    "vscode:update": "cd vscode && sh restore.sh",
+    "setting:shell": "sh setup_shell.sh",
     "dump:vscode:extensions": "code --list-extensions > ~/dotfiles/vscode/extensions",
     "dump:brew": "brew bundle dump --force --file '~/dotfiles/.Brewfile'",
     "-- TEST -----------------------------------------------": "",
