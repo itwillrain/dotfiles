@@ -81,4 +81,5 @@
   },
   "editor.cursorSmoothCaretAnimation": true,
   "diffEditor.ignoreTrimWhitespace": false,
+  "git.confirmSync": false,
 }
