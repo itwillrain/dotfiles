@@ -1,7 +1,6 @@
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/core"
-tap "AdoptOpenJDK/openjdk"
 tap "koekeishiya/formulae"
 
 brew "asdf"
@@ -40,9 +39,6 @@ brew "neovim"
 brew "tokei"
 brew "imagemagick"
 
-cask "adoptopenjdk8"
-cask "adoptopenjdk12"
-cask "adoptopenjdk"
 cask "authy"
 cask "dash"
 cask "the-unarchiver"
@@ -50,6 +46,7 @@ cask "appcleaner"
 cask "openinterminal"
 cask "google-chrome"
 cask "google-japanese-ime"
+
 cask "iterm2"
 cask "charles"
 cask "notion"
@@ -63,4 +60,7 @@ cask "sourcetree"
 cask "zoom"
 cask "warp"
 cask "fig"
+cask "dropbox"
 
+mas "BetterSnapTool", id: 417375580
+mas "Edison Mail", id: 1489591003
