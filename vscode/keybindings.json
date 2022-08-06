@@ -74,6 +74,11 @@
     "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
   },
   {
+    "key": "cmd+0",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+  },
+  {
     "key": "ctrl+shift+g",
     "command": "-workbench.view.scm",
     "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
@@ -92,6 +97,11 @@
     "key": "cmd+1",
     "command": "workbench.view.explorer",
     "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
   },
   {
     "key": "shift+cmd+e",
