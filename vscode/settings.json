@@ -76,10 +76,14 @@
   },
   "workbench.colorTheme": "SynthWave '84",
   "workbench.sideBar.location": "right",
-  "[ignore]": { 
+  "[ignore]": {
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "editor.cursorSmoothCaretAnimation": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "git.confirmSync": false,
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  }
 }
