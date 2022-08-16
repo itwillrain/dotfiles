@@ -1,0 +1,38 @@
+# Bind Settings
+# F でFetch
+
+# PでremoteへPush
+bind generic P ?git push -u %(remote) %(repo:head)
+
+# UでPull
+bind generic U ?git pull %(remote)
+
+# S で stash save
+bind generic S      ?git stash save "%(prompt Enter stash comment: )"
+
+# Y で stash pop
+bind diff    Y      ?git stash pop %(stash)
+bind stash   Y      ?git stash pop %(stash)
+
+# 差分の前後の表示行数（diff-context)を指定
+set diff-context = 4
+
+# color default         white   black
+color   cursor          black   green
+color   search-result   black   yellow
+
+# color author          green   black
+
+# color status          green   black
+color   line-number     red     black
+color   title-focus     black   yellow
+color   title-blur      black   magenta
+
+# Diff colors
+color diff-header       yellow  default
+color diff-index        blue    default
+color diff-chunk        magenta default
+color "Reported-by:"    green   default
+
+# View-specific color
+color tree.date         black   cyan    bold
