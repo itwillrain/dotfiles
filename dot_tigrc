@@ -14,6 +14,9 @@ bind generic S      ?git stash save "%(prompt Enter stash comment: )"
 bind diff    Y      ?git stash pop %(stash)
 bind stash   Y      ?git stash pop %(stash)
 
+# C でcommitzenでコミット
+bind status  C  !git cz
+
 # 差分の前後の表示行数（diff-context)を指定
 set diff-context = 4
 
