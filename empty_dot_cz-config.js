@@ -1,66 +1,57 @@
-'use strict';
 module.exports = {
   types: [
     {
-      name: 'feat',
-      code: 'feat: :+1:',
-      emoji: '👍',
-      description: '新機能'
+      value: ':sparkles: feat',
+      name: '✨  feat:\t新機能追加'
     },
     {
-      name: 'fix',
-      code: 'fix: :bug:',
-      emoji: '🐛',
-      description: 'バグ修正'
+      value: ':bug: fix',
+      name: '🐛 fix:\tバグ修正'
     },
     {
-      name: 'wip',
-      code: 'wip: :construction:',
-      emoji: '🚧',
-      description: '作業中'
+      value: ':memo: docs',
+      name: '📚 docs:\tドキュメントの変更',
     },
     {
-      name: 'chore',
-      code: 'chore: :paperclip:',
-      emoji: '📎',
-      description: 'その他の変更\n           （補助ツール、ドキュメント生成などのソースやテストの変更を含まない変更）'
+      value: ':lipstick: style',
+      name: '💄 style:\tスタイルの追加・更新',
     },
     {
-      name: 'style',
-      code: 'style: :sparkles:',
-      emoji: '✨',
-      description: 'フォーマットの変更\n          （コードの動作に影響しないスペース、フォーマット、セミコロンなどの変更)'
+      value: ':shirt: lint',
+      name: '👕 lint:\tLintエラーの修正やコードスタイルの修正',
     },
     {
-      name: 'docs',
-      code: 'docs: :books:',
-      emoji: '\uD83D\uDCDA ',
-      description: 'ドキュメントのみの変更'
+      value: ':recycle: refactor',
+      name: '♻️ refactor:\tリファクタリングのための変更\n\t\t（機能追加やバグ修正を含まない変更）',
     },
     {
-      name: 'perf',
-      code: 'perf: :zap:',
-      emoji: '⚡',
-      description: 'パフォーマンスの改善のための変更'
+      value: ':zap: perf',
+      name: '⚡️ perf:\tパフォーマンス改善のための変更',
     },
     {
-      name: 'refactor',
-      code: 'refactor: :recycle:',
-      emoji: '♻️',
-      description: 'リファクタリングのための変更\n            （機能追加やバグ修正を含まない変更）'
+      value: ':white_check_mark: test',
+      name: '✅  test:\tテストやCIの修正・改善',
     },
     {
-      name: 'test',
-      code: 'test: :green_heart:',
-      emoji: '\uD83D\uDC9A',
-      description: 'テストやCIの修正・改善'
+      value: ':truck: chore',
+      name: '🚚 chore:\tその他の変更\n\t\t（補助ツール、ドキュメント生成などのソースやテストの変更を含まない変更）',
     },
     {
-      name: 'release',
-      code: 'release :tada:',
-      emoji: '🎉',
-      description: '公開'
-    }
+      value: ':rewind: revert',
+      name: '⏪️ revert:\tRevertコミット'
+    },
+    {
+      value: ':construction: wip',
+      name: '🚧 wip:\t作業中'
+    },
+    {
+      value: ':fire: delete',
+      name: '🔥 delete:\t不要な機能・使われなくなった機能の削除',
+    },
+    {
+      value: ':green_heart: ci',
+      name: '💚 ci:\tCIの修正・改善',
+    },
   ],
   messages: {
     type: 'コミットする変更タイプを選択:\n',
@@ -73,6 +64,4 @@ module.exports = {
     footer: '関連issueを追記 (例:"fix #123", "re #123")(optional):\n',
     confirmCommit: 'このコミット内容でよろしいですか?'
   },
-  allowCustomScopes: true,
-  allowBreakingChanges: ['feat', 'fix']
-};
+}
