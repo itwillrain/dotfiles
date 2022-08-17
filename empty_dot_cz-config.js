@@ -9,6 +9,10 @@ module.exports = {
       name: '🐛 fix:\tバグ修正'
     },
     {
+      value: ':wrench: settings',
+      name: '🔧 settings:\tconfigファイルの追加/更新'
+    },
+    {
       value: ':memo: docs',
       name: '📚 docs:\tドキュメントの変更',
     },
