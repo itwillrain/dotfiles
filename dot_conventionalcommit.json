@@ -1,0 +1,66 @@
+{
+  "types": {
+    "feat": {
+      "description": "新機能追加"
+    },
+    "fix": {
+      "description": "バグ修正"
+    },
+    "settings": {
+      "description": "configファイルの追加/更新"
+    },
+    "docs": {
+      "description": "ドキュメントの変更"
+    },
+    "style": {
+      "description": "Lintエラーの修正やコードスタイルの修正"
+    },
+    "refactor": {
+      "description": "リファクタリングのための変更（機能追加やバグ修正を含まない変更）"
+    },
+    "perf": {
+      "description": "パフォーマンス改善のための変更"
+    },
+    "test": {
+      "description": "テストの修正・改善"
+    },
+    "chore": {
+      "description": "その他の変更（補助ツール、ドキュメント生成などのソースやテストの変更を含まない変更）"
+    },
+    "revert": {
+      "description": "Revertコミット"
+    },
+    "delete": {
+      "description": "不要な機能・使われなくなった機能の削除"
+    },
+    "ci": {
+      "description": "CIの修正・改善"
+    }
+  },
+  "footerTypes": [
+    {
+      "name": "BREAKING-CHANGE",
+      "description": "The commit introduces breaking API changes"
+    },
+    {
+      "name": "Closes",
+      "description": "The commit closes issues or pull requests"
+    },
+    {
+      "name": "Implements",
+      "description": "The commit implements features"
+    },
+    {
+      "name": "Author",
+      "description": "The commit's author"
+    },
+    {
+      "name": "Co-authored-by",
+      "description": "The commit is co-authored by another person.<br/>For multiple people use one line each"
+    },
+    {
+      "name": "Refs",
+      "description": "The commit references other commits by their hash ID.<br/>For multiple hash IDs use a comma as separator"
+    }
+  ]
+}
