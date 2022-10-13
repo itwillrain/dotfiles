@@ -14,7 +14,7 @@ set -x PATH $ANDROID_HOME/tools/bin $PATH
 if [ -f '$HOME/google-cloud-sdk/path.fish.inc' ]; . '$HOME/google-cloud-sdk/path.fish.inc'; end
 
 #asdf
-source ~/.asdf/asdf.fish
+source /opt/homebrew/opt/asdf/libexec/asdf.fish
 
 set GHQ_SELECTOR fzf
 

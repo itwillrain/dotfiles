@@ -40,7 +40,6 @@ brew "tokei"
 brew "imagemagick"
 brew "bitwarden-cli"
 cask "authy"
-cask "dash"
 cask "the-unarchiver"
 cask "appcleaner"
 cask "openinterminal"
@@ -62,7 +61,7 @@ cask "warp"
 cask "fig"
 cask "dropbox"
 cask "jetbrains-toolbox"
-cask "chezmoi"
+cask "alfred"
 
 mas "BetterSnapTool", id: 417375580
 mas "Edison Mail", id: 1489591003

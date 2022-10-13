@@ -1,1 +1,27 @@
-{}
+{
+  "name": "chezmoi",
+  "description": "itwillrain's dotfiles managed by [chezmoi](https://www.chezmoi.io/).",
+  "version": "1.0.0",
+  "scripts": {
+    "-- DEV ------------------------------------------------": "",
+    "setup:font": "sh setup_shell.sh",
+    "restore:vscode": "sh ./vscode/restore.sh" ,
+    "setting:shell": "sh setup_shell.sh",
+    "dump:vscode:extensions": "code --list-extensions > ~/dotfiles/vscode/extensions",
+    "dump:brew": "brew bundle dump --force --file '~/dotfiles/.Brewfile'",
+    "-- TEST -----------------------------------------------": "",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "-- BUILD ----------------------------------------------": "",
+    "-- OTHER ----------------------------------------------": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itwillrain/dotfiles.git"
+  },
+  "author": "itwillrain",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/itwillrain/dotfiles/issues"
+  },
+  "homepage": "https://github.com/itwillrain/dotfiles#readme"
+}
