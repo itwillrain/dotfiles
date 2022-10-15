@@ -62,6 +62,7 @@ cask "fig"
 cask "dropbox"
 cask "jetbrains-toolbox"
 cask "alfred"
+cask "alt-tab"
 
 mas "BetterSnapTool", id: 417375580
 mas "Edison Mail", id: 1489591003
