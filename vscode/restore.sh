@@ -36,7 +36,7 @@ fi
 
 # install extenstions
 if [ "$FLG_S" != "TRUE" ]; then
-  cat ./extensions | while read line; do
+  cat "$SCRIPT_DIR/extensions" | while read line; do
     code --install-extension $line
   done
   code --list-extensions >extensions
