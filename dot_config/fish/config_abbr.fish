@@ -61,6 +61,11 @@ abbr gcd 'git checkout develop'
 abbr gpd 'git pull origin develop'
 abbr gst 'git stash'
 abbr gsta 'git stash apply'
+abbr gp 'git fetch -p'
+abbr gsync 'git fetch -p && git branch --format "%(refname:short) %(upstream:track)"  \
+| grep "\[gone\]" \
+| awk \'{print $1}\' \
+| xargs git branch -d'
 
 # <a href="https://github.com/petervanderdoes/gitflow-avh">Git Flow AVH</a>
 abbr gf 'git flow'
