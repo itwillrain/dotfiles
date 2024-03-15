@@ -1,111 +1,111 @@
 // Place your key bindings in this file to overwrite the defaults
 // 既定値を上書きするには、このファイル内にキー バインドを挿入します
 [
-    {
-      "key": "ctrl+cmd+p",
-      "command": "extension.ghqOpen"
-    },
-    {
-      "key": "cmd+t",
-      "command": "workbench.action.terminal.new",
-      "when": "terminalFocus"
-    },
-    {
-      "key": "cmd+w",
-      "command": "workbench.action.terminal.kill",
-      "when": "terminalFocus"
-    },
-    {
-      "key": "cmd+d",
-      "command": "workbench.action.terminal.splitInActiveWorkspace",
-      "when": "terminalFocus"
-    },
-    {
-      "key": "cmd+r",
-      "command": "workbench.action.terminal.clear",
-      "when": "terminalFocus"
-    },
-    {
-      "key": "cmd+`",
-      "command": "workbench.action.terminal.toggleTerminal"
-    },
-    {
-      "key": "ctrl+`",
-      "command": "-workbench.action.terminal.toggleTerminal"
-    },
-    {
-      "key": "cmd+[",
-      "command": "workbench.action.terminal.focusPreviousPane",
-      "when": "terminalFocus"
-    },
-    {
-      "key": "alt+cmd+left",
-      "command": "-workbench.action.terminal.focusPreviousPane",
-      "when": "terminalFocus"
-    },
-    {
-      "key": "cmd+]",
-      "command": "workbench.action.terminal.focusNextPane",
-      "when": "terminalFocus"
-    },
-    {
-      "key": "alt+cmd+right",
-      "command": "-workbench.action.terminal.focusNextPane",
-      "when": "terminalFocus"
-    },
-    {
-      "key": "cmd+enter",
-      "command": "workbench.action.toggleMaximizedPanel",
-      "when": "terminalFocus"
-    },
-    {
-      "key": "cmd+0",
-      "command": "workbench.view.scm",
-      "when": "workbench.scm.active"
-    },
-    {
-      "key": "ctrl+shift+g",
-      "command": "-workbench.view.scm",
-      "when": "workbench.scm.active"
-    },
-    {
-      "key": "cmd+0",
-      "command": "workbench.view.scm",
-      "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-    },
-    {
-      "key": "cmd+0",
-      "command": "workbench.action.toggleSidebarVisibility",
-      "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
-    },
-    {
-      "key": "ctrl+shift+g",
-      "command": "-workbench.view.scm",
-      "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
-    },
-    {
-      "key": "cmd+1",
-      "command": "workbench.files.action.focusOpenEditorsView",
-      "when": "workbench.explorer.openEditorsView.active"
-    },
-    {
-      "key": "cmd+k e",
-      "command": "-workbench.files.action.focusOpenEditorsView",
-      "when": "workbench.explorer.openEditorsView.active"
-    },
-    {
-      "key": "cmd+1",
-      "command": "workbench.view.explorer",
-      "when": "viewContainer.workbench.view.explorer.enabled"
-    },
-    {
-      "key": "cmd+1",
-      "command": "workbench.action.toggleSidebarVisibility",
-      "when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
-    },
-    {
-      "key": "shift+cmd+e",
-      "command": "-workbench.view.explorer",
-      "when": "viewContainer.workbench.view.explorer.enabled"
-    }
-  ]
+  {
+    "key": "ctrl+cmd+p",
+    "command": "extension.ghqOpen"
+  },
+  {
+    "key": "cmd+t",
+    "command": "workbench.action.terminal.new",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+w",
+    "command": "workbench.action.terminal.kill",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+d",
+    "command": "workbench.action.terminal.splitInActiveWorkspace",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+r",
+    "command": "workbench.action.terminal.clear",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+`",
+    "command": "workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "-workbench.action.terminal.toggleTerminal"
+  },
+  {
+    "key": "cmd+[",
+    "command": "workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+cmd+left",
+    "command": "-workbench.action.terminal.focusPreviousPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+]",
+    "command": "workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "alt+cmd+right",
+    "command": "-workbench.action.terminal.focusNextPane",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+enter",
+    "command": "workbench.action.toggleMaximizedPanel",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "cmd+0",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "cmd+0",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "cmd+0",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.scm'"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active && !gitlens:disabled && config.gitlens.keymap == 'chorded'"
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.files.action.focusOpenEditorsView",
+    "when": "workbench.explorer.openEditorsView.active"
+  },
+  {
+    "key": "cmd+k e",
+    "command": "-workbench.files.action.focusOpenEditorsView",
+    "when": "workbench.explorer.openEditorsView.active"
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  },
+  {
+    "key": "cmd+1",
+    "command": "workbench.action.toggleSidebarVisibility",
+    "when": "sideBarFocus && activeViewlet == 'workbench.view.explorer'"
+  },
+  {
+    "key": "shift+cmd+e",
+    "command": "-workbench.view.explorer",
+    "when": "viewContainer.workbench.view.explorer.enabled"
+  }
+]

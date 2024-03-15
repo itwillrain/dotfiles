@@ -1,89 +1,91 @@
 {
-    "editor.suggestSelection": "first",
-    "workbench.startupEditor": "newUntitledFile",
-    "vetur.format.defaultFormatter.html": "none",
-    "breadcrumbs.enabled": true,
-    "javascript.validate.enable": false,
-    "editor.codeActionsOnSave": {
-      "source.fixAll.markdownlint": true,
-      "source.fixAll.eslint": true
+  "editor.suggestSelection": "first",
+  "workbench.startupEditor": "newUntitledFile",
+  "vetur.format.defaultFormatter.html": "none",
+  "breadcrumbs.enabled": true,
+  "javascript.validate.enable": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.markdownlint": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.minimap.enabled": false,
+  "workbench.colorCustomizations": {
+    "settings.headerForeground": "#FF4081",
+    "menu.selectionForeground": "#FF4081",
+    "textLink.foreground": "#FF4081",
+    "menubar.selectionForeground": "#FF4081",
+    "pickerGroup.foreground": "#FF4081",
+    "editorSuggestWidget.highlightForeground": "#FF4081",
+    "scrollbarSlider.activeBackground": "#FF408150",
+    "progressBar.background": "#FF4081",
+    "notificationLink.foreground": "#FF4081",
+    "panelTitle.activeBorder": "#FF4081",
+    "breadcrumb.activeSelectionForeground": "#FF4081",
+    "settings.modifiedItemIndicator": "#FF4081",
+    "list.highlightForeground": "#FF4081",
+    "list.activeSelectionForeground": "#FF4081",
+    "list.inactiveSelectionForeground": "#FF4081",
+    "editorWidget.resizeBorder": "#FF4081",
+    "activityBarBadge.background": "#FF4081",
+    "editorWidget.border": "#FF4081",
+    "settings.modifiedItemForeground": "#FF4081",
+    "tab.activeBorder": "#FF4081"
+  },
+  "open-in-browser.default": "chrome",
+  "workbench.iconTheme": "vscode-icons",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "terminal.integrated.fontFamily": "SauceCodePro Nerd Font Mono",
+  "hediet.vscode-drawio.codeLinkActivated": false,
+  "[json]": {
+    "gitlens.codeLens.scopes": ["document"],
+    "editor.quickSuggestions": {
+      "strings": true
     },
-    "editor.minimap.enabled": false,
-    "workbench.colorCustomizations": {
-      "settings.headerForeground": "#FF4081",
-      "menu.selectionForeground": "#FF4081",
-      "textLink.foreground": "#FF4081",
-      "menubar.selectionForeground": "#FF4081",
-      "pickerGroup.foreground": "#FF4081",
-      "editorSuggestWidget.highlightForeground": "#FF4081",
-      "scrollbarSlider.activeBackground": "#FF408150",
-      "progressBar.background": "#FF4081",
-      "notificationLink.foreground": "#FF4081",
-      "panelTitle.activeBorder": "#FF4081",
-      "breadcrumb.activeSelectionForeground": "#FF4081",
-      "settings.modifiedItemIndicator": "#FF4081",
-      "list.highlightForeground": "#FF4081",
-      "list.activeSelectionForeground": "#FF4081",
-      "list.inactiveSelectionForeground": "#FF4081",
-      "editorWidget.resizeBorder": "#FF4081",
-      "activityBarBadge.background": "#FF4081",
-      "editorWidget.border": "#FF4081",
-      "settings.modifiedItemForeground": "#FF4081",
-      "tab.activeBorder": "#FF4081"
-    },
-    "open-in-browser.default": "chrome",
-    "workbench.iconTheme": "material-icon-theme",
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "terminal.integrated.fontFamily": "SauceCodePro Nerd Font Mono",
-    "hediet.vscode-drawio.codeLinkActivated": false,
-    "[json]": {
-      "gitlens.codeLens.scopes": ["document"],
-      "editor.quickSuggestions": {
-        "strings": true
-      },
-      "editor.suggest.insertMode": "replace"
-    },
-    "css.validate": false,
-    "[vue]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "git.autofetch": true,
-    "editor.tabSize": 2,
-    "vetur.validation.template": false,
-    "javascript.format.enable": false,
-    "bracketPairColorizer.depreciation-notice": false,
-    "editor.formatOnSave": true,
-    "scss.validate": false,
-    "files.associations": {
-      "*.sass": "scss"
-    },
-    "editor.accessibilitySupport": "off",
-    "emmet.variables": {
-      "lang": "ja"
-    },
-    "editor.fontFamily": "Source Code Pro for Powerline, Meslo LG M DZ for Powrline, Menlo, Monaco, 'Courier New', monospace, ",
-    "less.validate": false,
-    "terminal.integrated.fontSize": 14,
-    "hediet.vscode-drawio.offline": false,
-    "editor.fontSize": 12,
-    "vsicons.dontShowNewVersionMessage": true,
-    "settingsSync.ignoredSettings": [],
-    "editor.fontWeight": "500",
-    "emmet.triggerExpansionOnTab": true,
-    "terminal.integrated.env.osx": {
-      "FIG_NEW_SESSION": "1"
-    },
-    "workbench.colorTheme": "SynthWave '84",
-    "workbench.sideBar.location": "right",
-    "[ignore]": {
-      "editor.defaultFormatter": "foxundermoon.shell-format"
-    },
-    "editor.cursorSmoothCaretAnimation": true,
-    "diffEditor.ignoreTrimWhitespace": false,
-    "git.confirmSync": false,
-    "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
-    "[shellscript]": {
-      "editor.defaultFormatter": "foxundermoon.shell-format"
-    }
-  }
+    "editor.suggest.insertMode": "replace"
+  },
+  "css.validate": false,
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "git.autofetch": true,
+  "editor.tabSize": 2,
+  "vetur.validation.template": false,
+  "javascript.format.enable": false,
+  "bracketPairColorizer.depreciation-notice": false,
+  "editor.formatOnSave": true,
+  "scss.validate": false,
+  "files.associations": {
+    "*.sass": "scss"
+  },
+  "editor.accessibilitySupport": "off",
+  "emmet.variables": {
+    "lang": "ja"
+  },
+  "editor.fontFamily": "UDEV Gothic LG, Menlo, Monaco, 'Courier New', monospace, ",
+  "less.validate": false,
+  "terminal.integrated.fontSize": 14,
+  "hediet.vscode-drawio.offline": false,
+  "editor.fontSize": 12,
+  "vsicons.dontShowNewVersionMessage": true,
+  "settingsSync.ignoredSettings": [],
+  "editor.fontWeight": "500",
+  "emmet.triggerExpansionOnTab": true,
+  "terminal.integrated.env.osx": {
+    "FIG_NEW_SESSION": "1"
+  },
+  "workbench.colorTheme": "SynthWave '84",
+  "workbench.sideBar.location": "right",
+  "[ignore]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "editor.cursorSmoothCaretAnimation": "on",
+  "diffEditor.ignoreTrimWhitespace": false,
+  "git.confirmSync": false,
+  "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
+  "[shellscript]": {
+    "editor.defaultFormatter": "foxundermoon.shell-format"
+  },
+  "editor.fontLigatures": false,
+  "npm.keybindingsChangedWarningShown": true
+}
