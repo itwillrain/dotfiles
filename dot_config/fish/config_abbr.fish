@@ -146,3 +146,6 @@ abbr ycc "yarn cache clean"
 abbr yh "yarn help"
 abbr yo "yarn outdated"
 abbr yui "yarn upgrade-interactive"
+
+# zip
+abbr cd ~/gitserver/github.com/team-lab/zipair-frontend && yarn checkif -c "../zipair-backend-for-frontend-swagger/openapi.yml" 
