@@ -87,5 +87,6 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "editor.fontLigatures": false,
-  "npm.keybindingsChangedWarningShown": true
+  "npm.keybindingsChangedWarningShown": true,
+  "redhat.telemetry.enabled": true
 }
