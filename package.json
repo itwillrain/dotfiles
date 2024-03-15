@@ -5,10 +5,10 @@
   "scripts": {
     "-- DEV ------------------------------------------------": "",
     "setup:font": "sh setup_shell.sh",
-    "restore:vscode": "sh ./vscode/restore.sh" ,
+    "restore:vscode": "sh ./vscode/restore.sh",
     "setting:shell": "sh setup_shell.sh",
-    "dump:vscode:extensions": "code --list-extensions > ~/dotfiles/vscode/extensions",
-    "dump:brew": "brew bundle dump --force --file '~/dotfiles/.Brewfile'",
+    "dump:vscode:extensions": "code --list-extensions > ./vscode/extensions",
+    "dump:brew": "brew bundle dump --force --file './.Brewfile'",
     "-- TEST -----------------------------------------------": "",
     "test": "echo \"Error: no test specified\" && exit 1",
     "-- BUILD ----------------------------------------------": "",
