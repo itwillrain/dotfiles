@@ -61,7 +61,6 @@ module.exports = {
   messages: {
     type: "コミットする変更タイプを選択:\n",
     scope: "変更内容のスコープ(例:コンポーネントやファイル名)(optional):\n",
-    // used if allowCustomScopes is true
     customScope:
       "変更内容のスコープ(例:コンポーネントやファイル名)(optional):\n",
     subject: "変更内容を要約した本質的説明:\n",
