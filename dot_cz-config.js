@@ -57,7 +57,7 @@ module.exports = {
       name: "💚 ci:\tCIの修正・改善",
     },
   ],
-  scopes: ["components", "pages", "database", "api", "other"],
+  scopes: ["components", "pages", "config", "api", "other"],
   messages: {
     type: "コミットする変更タイプを選択:\n",
     scope: "変更内容のスコープ(例:コンポーネントやファイル名)(optional):\n",
