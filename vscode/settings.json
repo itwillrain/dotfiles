@@ -62,11 +62,11 @@
   "emmet.variables": {
     "lang": "ja"
   },
-  "editor.fontFamily": "UDEV Gothic LG, Menlo, Monaco, 'Courier New', monospace, ",
+  "editor.fontFamily": "UDEV Gothic LG, SauceCodePro Nerd Font Mono, Monaco, 'Courier New', monospace, ",
   "less.validate": false,
   "terminal.integrated.fontSize": 14,
   "hediet.vscode-drawio.offline": false,
-  "editor.fontSize": 12,
+  "editor.fontSize": 14,
   "vsicons.dontShowNewVersionMessage": true,
   "settingsSync.ignoredSettings": [],
   "editor.fontWeight": "500",
