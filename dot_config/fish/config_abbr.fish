@@ -125,7 +125,7 @@ abbr nr 'npm remove'
 abbr nu 'npm update'
 abbr ns 'npm start'
 abbr nt 'npm test'
-abbr nr 'npm run'
+abbr nru 'npm run'
 
 # RM
 abbr rm 'rm -i'
