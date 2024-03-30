@@ -20,7 +20,7 @@ f = fetch
 fup = fetch upstream
 [difftool "sourcetree"]
 	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
+	path =
 [mergetool "sourcetree"]
 	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
 	trustExitCode = true
@@ -37,3 +37,4 @@ smudge = git-lfs smudge -- %f
 process = git-lfs filter-process
 required = true
 [core]
+    pager = git-split-diffs --color | less -RFX
