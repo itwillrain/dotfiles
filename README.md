@@ -19,6 +19,7 @@ mise bootstrap
 `mise bootstrap` は次の状態に収束させます。
 
 - Homebrew の CLI と主要 GUI アプリ（ChatGPT/Codex、Raycastを含む）
+- Docker CLI、Docker Compose、Colima（Docker Desktopは使用しない）
 - Node.js、Python、Go、Deno、AWS CLI、Starship、zoxide
 - mise 自身と Fish、Git、Neovim、Karabiner、VS Code の設定リンク
 - Finder の最小設定
@@ -58,6 +59,12 @@ mise lock --bump
 開発ツールの解決済みバージョンとチェックサムは `mise.lock` に固定し、更新時だけ
 `mise lock --bump` を実行します。
 VS Code 拡張は `vscode/extensions` を正とし、bootstrap の最後に不足分をインストールします。
+
+コンテナを使うときは、初回だけColimaを起動します。
+
+```shell
+colima start
+```
 
 ## AI agent workflow
 
