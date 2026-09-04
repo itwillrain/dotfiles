@@ -71,8 +71,48 @@ zoxide = "latest"
 [bootstrap.brew]
 adopt = true
 
+[bootstrap.macos.dock]
+autohide = true
+orientation = "right"
+magnification = true
+mru_spaces = false
+
+[bootstrap.macos.finder]
+preferred_view_style = "list"
+
+[bootstrap.macos.trackpad]
+tap_to_click = true
+three_finger_drag = false
+
 [bootstrap.macos.defaults]
-"NSGlobalDomain" = { AppleShowAllExtensions = true }
+"NSGlobalDomain" = { AppleShowAllExtensions = true, ApplePressAndHoldEnabled = "0" }
+"com.apple.dock" = { tilesize = 36.0, largesize = 16.0, "minimize-to-application" = false }
+"com.apple.finder" = { AppleShowAllFiles = "TRUE" }
+
+[tasks."macos:spaces"]
+description = "Restore Control+1..9 shortcuts for Mission Control desktops"
+run = '''
+tmp_path="$(mktemp "${TMPDIR:-/tmp}/mise-symbolic-hotkeys.XXXXXX")"
+trap 'rm -f "$tmp_path"' EXIT
+defaults export com.apple.symbolichotkeys "$tmp_path"
+
+for pair in 118:18 119:19 120:20 121:21 122:23 123:22 124:26 125:28 126:25; do
+    hotkey_id="${pair%%:*}"
+    key_code="${pair##*:}"
+    /usr/libexec/PlistBuddy -c "Delete :AppleSymbolicHotKeys:${hotkey_id}" "$tmp_path" 2>/dev/null || true
+    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id} dict" "$tmp_path"
+    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:enabled bool true" "$tmp_path"
+    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:value dict" "$tmp_path"
+    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:value:type string standard" "$tmp_path"
+    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:value:parameters array" "$tmp_path"
+    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:value:parameters:0 integer 65535" "$tmp_path"
+    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:value:parameters:1 integer ${key_code}" "$tmp_path"
+    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:value:parameters:2 integer 262144" "$tmp_path"
+done
+
+defaults import com.apple.symbolichotkeys "$tmp_path"
+killall SystemUIServer >/dev/null 2>&1 || true
+'''
 
 [tasks.check]
 description = "Validate the declarative workstation configuration"
@@ -83,7 +123,7 @@ description = "Install the curated VS Code extensions"
 run = "xargs -n 1 code --install-extension < vscode/extensions"
 
 [tasks.bootstrap]
-depends = ["vscode:install"]
+depends = ["vscode:install", "macos:spaces"]
 
 [tasks."agents:setup"]
 description = "Install Codex integrations for Herdr and cmux"
