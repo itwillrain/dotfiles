@@ -2,10 +2,6 @@
 // 既定値を上書きするには、このファイル内にキー バインドを挿入します
 [
   {
-    "key": "ctrl+cmd+p",
-    "command": "extension.ghqOpen"
-  },
-  {
     "key": "cmd+t",
     "command": "workbench.action.terminal.new",
     "when": "terminalFocus"

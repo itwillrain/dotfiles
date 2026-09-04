@@ -1,0 +1,14 @@
+Host github.com
+    HostName github.com
+    User git
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes
+    AddKeysToAgent yes
+    UseKeychain yes
+
+Host nas-codex
+    HostName 192.168.3.27
+    Port 2222
+    User node
+    IdentityFile ~/.ssh/id_ed25519
+    IdentitiesOnly yes

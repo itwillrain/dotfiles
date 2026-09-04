@@ -1,7 +1,6 @@
 {
   "editor.suggestSelection": "first",
   "workbench.startupEditor": "newUntitledFile",
-  "vetur.format.defaultFormatter.html": "none",
   "breadcrumbs.enabled": true,
   "javascript.validate.enable": false,
   "editor.codeActionsOnSave": {
@@ -31,11 +30,9 @@
     "settings.modifiedItemForeground": "#FF4081",
     "tab.activeBorder": "#FF4081"
   },
-  "open-in-browser.default": "chrome",
   "workbench.iconTheme": "vscode-icons",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.integrated.fontFamily": "SauceCodePro Nerd Font Mono",
-  "hediet.vscode-drawio.codeLinkActivated": false,
   "[json]": {
     "gitlens.codeLens.scopes": ["document"],
     "editor.quickSuggestions": {
@@ -47,12 +44,9 @@
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "git.autofetch": true,
   "editor.tabSize": 2,
-  "vetur.validation.template": false,
   "javascript.format.enable": false,
-  "bracketPairColorizer.depreciation-notice": false,
   "editor.formatOnSave": true,
   "scss.validate": false,
   "files.associations": {
@@ -65,15 +59,10 @@
   "editor.fontFamily": "UDEV Gothic LG, SauceCodePro Nerd Font Mono, Monaco, 'Courier New', monospace, ",
   "less.validate": false,
   "terminal.integrated.fontSize": 14,
-  "hediet.vscode-drawio.offline": false,
   "editor.fontSize": 14,
   "vsicons.dontShowNewVersionMessage": true,
-  "settingsSync.ignoredSettings": [],
   "editor.fontWeight": "500",
   "emmet.triggerExpansionOnTab": true,
-  "terminal.integrated.env.osx": {
-    "FIG_NEW_SESSION": "1"
-  },
   "workbench.colorTheme": "SynthWave '84",
   "workbench.sideBar.location": "right",
   "[ignore]": {
@@ -87,6 +76,5 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "editor.fontLigatures": false,
-  "npm.keybindingsChangedWarningShown": true,
   "redhat.telemetry.enabled": true
 }
