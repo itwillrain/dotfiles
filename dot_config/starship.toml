@@ -1,0 +1,71 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+format = """
+[](fg:#3b4252)\
+$username\
+$directory\
+${custom.git_clean}\
+${custom.git_dirty}\
+[](fg:#3b4252)\
+$line_break$character"""
+
+[username]
+show_always = true
+style_user = "bg:#3b4252 fg:#d8dee9"
+style_root = "bg:#3b4252 fg:#d8dee9"
+format = '[ $user ]($style)'
+disabled = false
+
+[directory]
+style = "bg:#3b4252 fg:#d8dee9"
+format = '[ $path ]($style)'
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+[c]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[cpp]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[docker_context]
+symbol = " "
+style = "bg:#06969A"
+format = '[ $symbol $context ]($style)'
+
+[elixir]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[elm]
+symbol = " "
+style = "bg:#86BBD8"
+format = '[ $symbol ($version) ]($style)'
+
+[custom.git_clean]
+command = "git branch --show-current"
+when = 'git rev-parse --is-inside-work-tree >/dev/null 2>&1 && test -z "$(git status --porcelain)"'
+format = '[](fg:#3b4252 bg:#39ff14)[  $output ]($style)[](fg:#39ff14 bg:#3b4252)'
+style = "bg:#39ff14 fg:#111111"
+
+[custom.git_dirty]
+command = "git branch --show-current"
+when = 'git rev-parse --is-inside-work-tree >/dev/null 2>&1 && test -n "$(git status --porcelain)"'
+format = '[](fg:#3b4252 bg:#ff4f81)[  $output ]($style)[](fg:#ff4f81 bg:#3b4252)'
+style = "bg:#ff4f81 fg:#111111"
+
+[character]
+success_symbol = '[❯](bold #39ff14) '
+error_symbol = '[❯](bold #ff4f81) '
+vimcmd_symbol = '[❮](bold #39ff14) '

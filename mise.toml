@@ -49,6 +49,8 @@ zoxide = "latest"
 "brew-cask:alt-tab" = "latest"
 "brew-cask:chatgpt" = "latest"
 "brew-cask:cmux" = "latest"
+"brew-cask:font-sauce-code-pro-nerd-font" = "latest"
+"brew-cask:font-udev-gothic-nf" = "latest"
 "brew-cask:google-chrome" = "latest"
 "brew-cask:google-japanese-ime" = "latest"
 "brew-cask:karabiner-elements" = "latest"
@@ -60,9 +62,10 @@ zoxide = "latest"
 [dotfiles]
 "~/.config/fish" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/fish", mode = "symlink" }
 "~/.config/git" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/git", mode = "symlink" }
-"~/.config/karabiner" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/private_karabiner", mode = "symlink" }
+"~/.config/karabiner/karabiner.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/private_karabiner/private_karabiner.json", mode = "symlink" }
 "~/.config/mise/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/mise.toml", mode = "symlink" }
 "~/.config/nvim" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nvim", mode = "symlink" }
+"~/.config/starship.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/starship.toml", mode = "symlink" }
 "~/.gitconfig" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_gitconfig", mode = "symlink" }
 "~/.ideavimrc" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_ideavimrc", mode = "symlink" }
 "~/.ssh/config" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_ssh/config", mode = "symlink" }
@@ -90,6 +93,9 @@ three_finger_drag = false
 "NSGlobalDomain" = { AppleShowAllExtensions = true, ApplePressAndHoldEnabled = "0" }
 "com.apple.dock" = { tilesize = 36.0, largesize = 16.0, "minimize-to-application" = false }
 "com.apple.finder" = { AppleShowAllFiles = "TRUE" }
+
+[bootstrap.user]
+login_shell = "/opt/homebrew/bin/fish"
 
 [tasks."macos:spaces"]
 description = "Restore Control+1..9 shortcuts for Mission Control desktops"
@@ -122,7 +128,7 @@ run = ["mise fmt --check", "mise bootstrap status"]
 
 [tasks."vscode:install"]
 description = "Install the curated VS Code extensions"
-run = "xargs -n 1 code --install-extension < vscode/extensions"
+run = "xargs -n 1 code --install-extension < \"$MISE_ORIGINAL_CWD/vscode/extensions\""
 
 [tasks.bootstrap]
 depends = ["vscode:install", "macos:spaces"]

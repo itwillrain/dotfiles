@@ -8,6 +8,7 @@ backend = "aqua:aws/aws-cli"
 specifiers = ["latest"]
 
 [tools.aws-cli."platforms.macos-arm64"]
+checksum = "blake3:415fdb08ed66b7edd2c0284c19d0d6c51ec8e6f53d1f8068ca1b0e7aa1074119"
 url = "https://awscli.amazonaws.com/AWSCLIV2-2.36.39.pkg"
 
 [[tools.deno]]

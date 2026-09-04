@@ -4,7 +4,7 @@
   "breadcrumbs.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.markdownlint": "explicit",
-    "source.fixAll.eslint": "explicit"
+    "source.fixAll.eslint": "explicit",
   },
   "editor.minimap.enabled": false,
   "workbench.colorCustomizations": {
@@ -27,46 +27,51 @@
     "activityBarBadge.background": "#FF4081",
     "editorWidget.border": "#FF4081",
     "settings.modifiedItemForeground": "#FF4081",
-    "tab.activeBorder": "#FF4081"
+    "tab.activeBorder": "#FF4081",
   },
   "workbench.iconTheme": "vscode-icons",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "terminal.integrated.fontFamily": "SauceCodePro Nerd Font Mono",
+  "terminal.integrated.defaultProfile.osx": "fish",
+  "terminal.integrated.profiles.osx": {
+    "fish": {
+      "path": "/opt/homebrew/bin/fish",
+    },
+  },
   "[json]": {
     "gitlens.codeLens.scopes": ["document"],
     "editor.quickSuggestions": {
-      "strings": true
+      "strings": true,
     },
-    "editor.suggest.insertMode": "replace"
+    "editor.suggest.insertMode": "replace",
   },
   "[vue]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
   },
   "git.autofetch": true,
   "editor.tabSize": 2,
   "editor.formatOnSave": true,
   "editor.accessibilitySupport": "off",
   "emmet.variables": {
-    "lang": "ja"
+    "lang": "ja",
   },
-  "editor.fontFamily": "UDEV Gothic LG, SauceCodePro Nerd Font Mono, Monaco, 'Courier New', monospace, ",
+  "editor.fontFamily": "UDEV Gothic NFLG, SauceCodePro Nerd Font Mono, Monaco, 'Courier New', monospace, ",
   "terminal.integrated.fontSize": 14,
   "editor.fontSize": 14,
   "vsicons.dontShowNewVersionMessage": true,
   "editor.fontWeight": "500",
   "emmet.triggerExpansionOnTab": true,
-  "workbench.colorTheme": "SynthWave '84",
   "workbench.sideBar.location": "right",
   "[ignore]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+    "editor.defaultFormatter": "foxundermoon.shell-format",
   },
   "editor.cursorSmoothCaretAnimation": "on",
   "diffEditor.ignoreTrimWhitespace": false,
   "git.confirmSync": false,
   "vscode-neovim.neovimExecutablePaths.darwin": "/opt/homebrew/bin/nvim",
   "[shellscript]": {
-    "editor.defaultFormatter": "foxundermoon.shell-format"
+    "editor.defaultFormatter": "foxundermoon.shell-format",
   },
   "editor.fontLigatures": false,
-  "telemetry.telemetryLevel": "off"
+  "telemetry.telemetryLevel": "off",
 }
