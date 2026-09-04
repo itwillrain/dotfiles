@@ -1,0 +1,73 @@
+min_version = "2026.7.4"
+
+[settings]
+dotfiles.root = "~/gitserver/github.com/itwillrain/dotfiles"
+
+# Machine-wide development runtimes. Projects can override these versions in
+# their own mise.toml without changing this repository.
+[tools]
+aws-cli = "latest"
+deno = "latest"
+go = "latest"
+node = "lts"
+python = "latest"
+
+# Keep the workstation baseline intentionally small. Add application-specific
+# packages only after they have proved useful on every machine.
+[bootstrap.packages]
+"brew:bat" = "latest"
+"brew:bitwarden-cli" = "latest"
+"brew:chezmoi" = "latest"
+"brew:coreutils" = "latest"
+"brew:fd" = "latest"
+"brew:fish" = "latest"
+"brew:fzf" = "latest"
+"brew:gh" = "latest"
+"brew:ghq" = "latest"
+"brew:git" = "latest"
+"brew:gnupg" = "latest"
+"brew:graphviz" = "latest"
+"brew:imagemagick" = "latest"
+"brew:jq" = "latest"
+"brew:lsd" = "latest"
+"brew:neovim" = "latest"
+"brew:pandoc" = "latest"
+"brew:ripgrep" = "latest"
+"brew:terminal-notifier" = "latest"
+"brew:tig" = "latest"
+"brew:tokei" = "latest"
+"brew:yq" = "latest"
+"brew-cask:alt-tab" = "latest"
+"brew-cask:docker" = "latest"
+"brew-cask:google-chrome" = "latest"
+"brew-cask:google-japanese-ime" = "latest"
+"brew-cask:iterm2" = "latest"
+"brew-cask:karabiner-elements" = "latest"
+"brew-cask:visual-studio-code" = "latest"
+
+# The repository keeps chezmoi source names for a low-risk migration. mise
+# links them directly, so new changes no longer depend on `chezmoi apply`.
+[dotfiles]
+"~/.commit_template" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_commit_template", mode = "symlink" }
+"~/.config/fish" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/fish", mode = "symlink" }
+"~/.config/git" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/git", mode = "symlink" }
+"~/.config/karabiner" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/private_karabiner", mode = "symlink" }
+"~/.config/mise/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/mise.toml", mode = "symlink" }
+"~/.config/nvim" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nvim", mode = "symlink" }
+"~/.cz-config.js" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_cz-config.js", mode = "symlink" }
+"~/.czrc" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_czrc", mode = "symlink" }
+"~/.gitconfig" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_gitconfig", mode = "symlink" }
+"~/.ideavimrc" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_ideavimrc", mode = "symlink" }
+"~/.tigrc" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_tigrc", mode = "symlink" }
+"~/Library/Application Support/Code/User/keybindings.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/vscode/keybindings.json", mode = "symlink" }
+"~/Library/Application Support/Code/User/settings.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/vscode/settings.json", mode = "symlink" }
+
+[bootstrap.macos.finder]
+show_all_extensions = true
+
+[tasks.check]
+description = "Validate the declarative workstation configuration"
+run = [
+  "mise fmt --check mise.toml",
+  "mise bootstrap status --missing",
+]

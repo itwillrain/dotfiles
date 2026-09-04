@@ -13,8 +13,10 @@ set -x PATH $ANDROID_HOME/tools/bin $PATH
 #  The next line updates PATH for the Google Cloud SDK.
 if [ -f '$HOME/google-cloud-sdk/path.fish.inc' ]; . '$HOME/google-cloud-sdk/path.fish.inc'; end
 
-#asdf
-source /opt/homebrew/opt/asdf/libexec/asdf.fish
+# mise manages runtimes and CLI tools declared in mise.toml.
+if command -q mise
+    mise activate fish | source
+end
 
 set GHQ_SELECTOR fzf
 
@@ -33,11 +35,7 @@ source "$HOME/.config/fish/config_abbr.fish"
 # Brew
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    
-    # PATH
-    set PATH /opt/homebrew/bin $PATH # <-追加
-end
 
-# Volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+    # PATH
+    fish_add_path /opt/homebrew/bin
+end

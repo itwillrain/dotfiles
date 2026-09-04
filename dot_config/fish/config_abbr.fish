@@ -8,7 +8,7 @@ abbr cp 'cp -i'
 abbr cat 'bat'
 
 # Dotfile
-abbr dot 'cd ~/dotfiles'
+abbr dot 'cd ~/gitserver/github.com/itwillrain/dotfiles'
 
 # Docker
 abbr d 'docker'
