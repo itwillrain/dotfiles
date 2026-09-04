@@ -8,7 +8,8 @@ Homebrew と mise だけを先に用意し、リポジトリのルートで boot
 
 ```shell
 brew install mise
-git clone git@github.com:itwillrain/dotfiles.git ~/gitserver/github.com/itwillrain/dotfiles
+# 初回はSSH鍵がまだないためHTTPSでcloneする
+git clone https://github.com/itwillrain/dotfiles.git ~/gitserver/github.com/itwillrain/dotfiles
 cd ~/gitserver/github.com/itwillrain/dotfiles
 mise trust
 mise bootstrap --dry-run
@@ -34,10 +35,16 @@ mise が管理するのは公開可能な `~/.ssh/config` だけです。
 ```shell
 ssh-keygen -t ed25519 -a 100 -C "github-mac"
 ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+pbcopy < ~/.ssh/id_ed25519.pub
+```
+
+新しい端末では、表示された公開鍵をGitHubに登録してから、clone先のremoteをSSHへ切り替えます。
+
+```shell
+git remote set-url origin git@github.com:itwillrain/dotfiles.git
 ssh -T git@github.com
 ```
 
-新しい端末では `~/.ssh/id_ed25519.pub` の内容をGitHubに登録します。
 端末の紛失時は、GitHubからその端末の公開鍵だけを削除します。
 
 ## Maintenance
