@@ -2,6 +2,10 @@ min_version = "2026.7.4"
 
 [settings]
 dotfiles.root = "~/gitserver/github.com/itwillrain/dotfiles"
+lockfile = true
+lockfile_platforms = ["macos-arm64"]
+minimum_release_age = "7d"
+task.run_auto_install = false
 
 # Machine-wide development runtimes. Projects can override these versions in
 # their own mise.toml without changing this repository.
@@ -25,8 +29,10 @@ zoxide = "latest"
 "brew:gh" = "latest"
 "brew:ghq" = "latest"
 "brew:git" = "latest"
+"brew:git-lfs" = "latest"
 "brew:gnupg" = "latest"
 "brew:graphviz" = "latest"
+"brew:herdr" = "latest"
 "brew:imagemagick" = "latest"
 "brew:jq" = "latest"
 "brew:lsd" = "latest"
@@ -39,10 +45,10 @@ zoxide = "latest"
 "brew:yq" = "latest"
 "brew-cask:alt-tab" = "latest"
 "brew-cask:chatgpt" = "latest"
-"brew-cask:docker" = "latest"
+"brew-cask:cmux" = "latest"
+"brew-cask:docker-desktop" = "latest"
 "brew-cask:google-chrome" = "latest"
 "brew-cask:google-japanese-ime" = "latest"
-"brew-cask:iterm2" = "latest"
 "brew-cask:karabiner-elements" = "latest"
 "brew-cask:raycast" = "latest"
 "brew-cask:visual-studio-code" = "latest"
@@ -62,15 +68,15 @@ zoxide = "latest"
 "~/Library/Application Support/Code/User/keybindings.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/vscode/keybindings.json", mode = "symlink" }
 "~/Library/Application Support/Code/User/settings.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/vscode/settings.json", mode = "symlink" }
 
-[bootstrap.macos.finder]
-show_all_extensions = true
+[bootstrap.brew]
+adopt = true
+
+[bootstrap.macos.defaults]
+"NSGlobalDomain" = { AppleShowAllExtensions = true }
 
 [tasks.check]
 description = "Validate the declarative workstation configuration"
-run = [
-  "mise fmt --check mise.toml",
-  "mise bootstrap status --missing",
-]
+run = ["mise fmt --check", "mise bootstrap status"]
 
 [tasks."vscode:install"]
 description = "Install the curated VS Code extensions"
@@ -78,3 +84,7 @@ run = "xargs -n 1 code --install-extension < vscode/extensions"
 
 [tasks.bootstrap]
 depends = ["vscode:install"]
+
+[tasks."agents:setup"]
+description = "Install Codex integrations for Herdr and cmux"
+run = ["herdr integration install codex", "cmux hooks setup codex --yes"]

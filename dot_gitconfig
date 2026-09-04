@@ -2,7 +2,9 @@
 root = ~/gitserver
 [user]
 name = Matsushita Takeshi
-email = matsushitatakeshi@team-lab.com
+email = 4383381+itwillrain@users.noreply.github.com
+[includeIf "gitdir:~/gitserver/github.com/team-lab/"]
+	path = ~/.config/git/team-lab.gitconfig
 [alias]
 s = status -sb
 d = diff
@@ -14,7 +16,7 @@ cob = checkout -b
 c = commit
 cm = commit -m
 pso = push origin
-pl = pullls
+pl = pull
 plo = pull origin
 f = fetch
 fup = fetch upstream

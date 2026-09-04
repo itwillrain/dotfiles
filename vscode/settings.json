@@ -2,7 +2,6 @@
   "editor.suggestSelection": "first",
   "workbench.startupEditor": "newUntitledFile",
   "breadcrumbs.enabled": true,
-  "javascript.validate.enable": false,
   "editor.codeActionsOnSave": {
     "source.fixAll.markdownlint": "explicit",
     "source.fixAll.eslint": "explicit"
@@ -40,24 +39,17 @@
     },
     "editor.suggest.insertMode": "replace"
   },
-  "css.validate": false,
   "[vue]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "git.autofetch": true,
   "editor.tabSize": 2,
-  "javascript.format.enable": false,
   "editor.formatOnSave": true,
-  "scss.validate": false,
-  "files.associations": {
-    "*.sass": "scss"
-  },
   "editor.accessibilitySupport": "off",
   "emmet.variables": {
     "lang": "ja"
   },
   "editor.fontFamily": "UDEV Gothic LG, SauceCodePro Nerd Font Mono, Monaco, 'Courier New', monospace, ",
-  "less.validate": false,
   "terminal.integrated.fontSize": 14,
   "editor.fontSize": 14,
   "vsicons.dontShowNewVersionMessage": true,
@@ -76,5 +68,5 @@
     "editor.defaultFormatter": "foxundermoon.shell-format"
   },
   "editor.fontLigatures": false,
-  "redhat.telemetry.enabled": true
+  "telemetry.telemetryLevel": "off"
 }

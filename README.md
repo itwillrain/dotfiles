@@ -44,8 +44,21 @@ ssh -T git@github.com
 
 ```shell
 mise run check
-mise upgrade
+mise lock --bump
 ```
 
 開発ツール、Homebrewパッケージ、dotfilesは `mise.toml` で一元管理します。
+開発ツールの解決済みバージョンとチェックサムは `mise.lock` に固定し、更新時だけ
+`mise lock --bump` を実行します。
 VS Code 拡張は `vscode/extensions` を正とし、bootstrap の最後に不足分をインストールします。
+
+## AI agent workflow
+
+Codex の並列作業とセッション維持に cmux と Herdr を使います。
+本体は `mise bootstrap` で導入し、初回だけCodex連携を有効化します。
+
+```shell
+mise run agents:setup
+```
+
+Herdrのセッション、cmuxのUI設定、両者のログは端末ローカルとし、Git管理しません。

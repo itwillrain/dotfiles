@@ -4,13 +4,8 @@
 set surround
 
 set commentary
-set multiple-cursors
-
-map mc <A-n>
-map mx <A-x>
-map mp <A-p>
 
 "-------------------------------------------------------------------------------
 " ヤンクするとクリップボードに保存される
 "-------------------------------------------------------------------------------
-set clipboard+=unnamed
+set clipboard+=unnamedplus
