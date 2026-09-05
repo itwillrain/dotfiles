@@ -60,6 +60,19 @@ mise lock --bump
 `mise lock --bump` を実行します。
 VS Code 拡張は `vscode/extensions` を正とし、bootstrap の最後に不足分をインストールします。
 
+## Keyboard layout philosophy
+
+ショートカットは、操作の範囲で修飾キーを使い分けます。
+
+- `Command`：現在のアプリ内の操作
+- `Option`：アプリをまたぐ操作、Workspaceの切り替え
+- `Option + Shift`：フォーカス中のウィンドウの移動
+
+AeroSpaceでは、`Option + 1〜9`でWorkspaceを切り替え、
+`Option + Shift + 1〜9`でウィンドウを指定Workspaceへ移動します。
+方向移動も同じ考え方で、`Option + H/J/K/L`がフォーカス、
+`Option + Shift + H/J/K/L`がウィンドウ移動です。
+
 コンテナを使うときは、初回だけColimaを起動します。
 
 ```shell
