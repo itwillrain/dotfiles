@@ -55,6 +55,7 @@ zoxide = "latest"
 "brew-cask:google-chrome" = "latest"
 "brew-cask:google-japanese-ime" = "latest"
 "brew-cask:karabiner-elements" = "latest"
+"brew-cask:obsidian" = "latest"
 "brew-cask:raycast" = "latest"
 "brew-cask:visual-studio-code" = "latest"
 
