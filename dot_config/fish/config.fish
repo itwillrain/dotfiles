@@ -1,4 +1,5 @@
 fish_add_path /opt/homebrew/bin
+fish_add_path "/Applications/ChatGPT.app/Contents/Resources"
 
 if command -q mise
     mise activate fish | source

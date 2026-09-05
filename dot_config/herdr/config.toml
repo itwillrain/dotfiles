@@ -1,0 +1,6 @@
+[terminal]
+default_shell = "/opt/homebrew/bin/fish"
+shell_mode = "auto"
+
+[ui]
+agent_panel_sort = "spaces"

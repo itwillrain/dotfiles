@@ -13,6 +13,7 @@ task.run_auto_install = false
 aws-cli = "latest"
 deno = "latest"
 go = "latest"
+hunk = "latest"
 node = "lts"
 python = "latest"
 starship = "latest"
@@ -48,7 +49,7 @@ zoxide = "latest"
 "brew:yq" = "latest"
 "brew-cask:alt-tab" = "latest"
 "brew-cask:chatgpt" = "latest"
-"brew-cask:cmux" = "latest"
+"brew-cask:ghostty" = "latest"
 "brew-cask:font-sauce-code-pro-nerd-font" = "latest"
 "brew-cask:font-udev-gothic-nf" = "latest"
 "brew-cask:google-chrome" = "latest"
@@ -61,6 +62,7 @@ zoxide = "latest"
 # links them directly, so new changes no longer depend on `chezmoi apply`.
 [dotfiles]
 "~/.config/fish" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/fish", mode = "symlink" }
+"~/.config/herdr/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/herdr/config.toml", mode = "symlink" }
 "~/.config/git" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/git", mode = "symlink" }
 "~/.config/karabiner/karabiner.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/private_karabiner/private_karabiner.json", mode = "symlink" }
 "~/.config/mise/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/mise.toml", mode = "symlink" }
@@ -134,5 +136,5 @@ run = "xargs -n 1 code --install-extension < \"$MISE_ORIGINAL_CWD/vscode/extensi
 depends = ["vscode:install", "macos:spaces"]
 
 [tasks."agents:setup"]
-description = "Install Codex integrations for Herdr and cmux"
-run = ["herdr integration install codex", "cmux hooks setup codex --yes"]
+description = "Install the Codex integration for Herdr"
+run = "herdr integration install codex"

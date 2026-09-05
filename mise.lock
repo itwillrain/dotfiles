@@ -29,6 +29,16 @@ specifiers = ["latest"]
 checksum = "sha256:90493b3bbd5e10f91d12153198bf1994fd756399b4fec93b49b0c6e2acdeeb3e"
 url = "https://dl.google.com/go/go1.27.0.darwin-arm64.tar.gz"
 
+[[tools.hunk]]
+version = "0.20.0"
+backend = "aqua:modem-dev/hunk"
+specifiers = ["latest"]
+
+[tools.hunk."platforms.macos-arm64"]
+checksum = "sha256:96d298009d8968b2a7859961354d323e13de8f7ecf4e701ac59aab4edcc56bbb"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.20.0/hunkdiff-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/529321148"
+
 [[tools.node]]
 version = "24.20.0"
 backend = "core:node"
