@@ -1,0 +1,5 @@
+# Keep accidental Command+Enter from toggling fullscreen.
+keybind = super+enter=ignore
+
+# Use Command+Shift+Enter for fullscreen instead.
+keybind = super+shift+enter=toggle_fullscreen

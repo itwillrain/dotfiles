@@ -47,21 +47,11 @@ zoxide = "latest"
 "brew:tig" = "latest"
 "brew:tokei" = "latest"
 "brew:yq" = "latest"
-"brew-cask:alt-tab" = "latest"
-"brew-cask:chatgpt" = "latest"
-"brew-cask:ghostty" = "latest"
-"brew-cask:font-sauce-code-pro-nerd-font" = "latest"
-"brew-cask:font-udev-gothic-nf" = "latest"
-"brew-cask:google-chrome" = "latest"
-"brew-cask:google-japanese-ime" = "latest"
-"brew-cask:karabiner-elements" = "latest"
-"brew-cask:obsidian" = "latest"
-"brew-cask:raycast" = "latest"
-"brew-cask:visual-studio-code" = "latest"
 
 # The repository keeps chezmoi source names for a low-risk migration. mise
 # links them directly, so new changes no longer depend on `chezmoi apply`.
 [dotfiles]
+"~/.config/aerospace/aerospace.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/aerospace/aerospace.toml", mode = "symlink" }
 "~/.config/fish" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/fish", mode = "symlink" }
 "~/.config/herdr/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/herdr/config.toml", mode = "symlink" }
 "~/.config/git" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/git", mode = "symlink" }
@@ -73,6 +63,7 @@ zoxide = "latest"
 "~/.ideavimrc" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_ideavimrc", mode = "symlink" }
 "~/.ssh/config" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_ssh/config", mode = "symlink" }
 "~/.tigrc" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_tigrc", mode = "symlink" }
+"~/Library/Application Support/com.mitchellh.ghostty/config.ghostty" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/ghostty/config.ghostty", mode = "symlink" }
 "~/Library/Application Support/Code/User/keybindings.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/vscode/keybindings.json", mode = "symlink" }
 "~/Library/Application Support/Code/User/settings.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/vscode/settings.json", mode = "symlink" }
 
@@ -131,10 +122,78 @@ run = ["mise fmt --check", "mise bootstrap status"]
 
 [tasks."vscode:install"]
 description = "Install the curated VS Code extensions"
+depends = ["visual-studio-code:install"]
 run = "xargs -n 1 code --install-extension < \"$MISE_ORIGINAL_CWD/vscode/extensions\""
 
 [tasks.bootstrap]
-depends = ["vscode:install", "macos:spaces"]
+depends = [
+  "aerospace:install",
+  "alt-tab:install",
+  "chatgpt:install",
+  "figma:install",
+  "fonts:install",
+  "google-chrome:install",
+  "google-japanese-ime:install",
+  "ghostty:install",
+  "karabiner-elements:install",
+  "obsidian:install",
+  "raycast:install",
+  "vscode:install",
+  "visual-studio-code:install",
+]
+
+# Some casks do not publish the API metadata that mise's direct brew-cask
+# backend expects, so install them through Homebrew tasks.
+[tasks."aerospace:install"]
+description = "Install AeroSpace via its official Homebrew tap"
+run = "test -d /Applications/AeroSpace.app || brew install --cask nikitabobko/tap/aerospace"
+
+[tasks."alt-tab:install"]
+description = "Install AltTab through Homebrew"
+run = "test -d /Applications/AltTab.app || brew install --cask alt-tab"
+
+[tasks."chatgpt:install"]
+description = "Install ChatGPT through Homebrew"
+run = "test -d /Applications/ChatGPT.app || brew install --cask chatgpt"
+
+[tasks."ghostty:install"]
+description = "Install Ghostty through Homebrew"
+run = "test -d /Applications/Ghostty.app || brew install --cask ghostty"
+
+[tasks."figma:install"]
+description = "Install Figma through Homebrew"
+run = "test -d /Applications/Figma.app || brew install --cask figma"
+
+[tasks."google-chrome:install"]
+description = "Install Google Chrome through Homebrew"
+run = "test -d '/Applications/Google Chrome.app' || brew install --cask google-chrome"
+
+[tasks."google-japanese-ime:install"]
+description = "Install Google Japanese Input through Homebrew"
+run = "test -d '/Library/Input Methods/GoogleJapaneseInput.app' || brew install --cask google-japanese-ime"
+
+[tasks."fonts:install"]
+description = "Install configured fonts through Homebrew"
+run = '''
+test -e "$HOME/Library/Fonts/SauceCodeProNerdFont-Regular.ttf" -o -e "/Library/Fonts/SauceCodeProNerdFont-Regular.ttf" || brew install --cask font-sauce-code-pro-nerd-font
+test -e "$HOME/Library/Fonts/UDEVGothicNFLG-Regular.ttf" -o -e "/Library/Fonts/UDEVGothicNFLG-Regular.ttf" || brew install --cask font-udev-gothic-nf
+'''
+
+[tasks."karabiner-elements:install"]
+description = "Install Karabiner-Elements through Homebrew"
+run = "test -d /Applications/Karabiner-Elements.app || brew install --cask karabiner-elements"
+
+[tasks."obsidian:install"]
+description = "Install Obsidian through Homebrew"
+run = "test -d /Applications/Obsidian.app || brew install --cask obsidian"
+
+[tasks."raycast:install"]
+description = "Install Raycast through Homebrew"
+run = "test -d /Applications/Raycast.app || brew install --cask raycast"
+
+[tasks."visual-studio-code:install"]
+description = "Install Visual Studio Code through Homebrew"
+run = "test -d '/Applications/Visual Studio Code.app' || brew install --cask visual-studio-code"
 
 [tasks."agents:setup"]
 description = "Install the Codex integration for Herdr"

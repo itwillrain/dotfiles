@@ -18,11 +18,11 @@ mise bootstrap
 
 `mise bootstrap` は次の状態に収束させます。
 
-- Homebrew の CLI と主要 GUI アプリ（ChatGPT/Codex、Raycastを含む）
+- Homebrew の CLI と主要 GUI アプリ（AeroSpace、ChatGPT/Codex、Raycastを含む）
 - Docker CLI、Docker Compose、Colima（Docker Desktopは使用しない）
 - Node.js、Python、Go、Deno、AWS CLI、Starship、zoxide
 - mise 自身と Fish、Git、Neovim、Karabiner、VS Code の設定リンク
-- Finder の最小設定
+- Finder の最小設定とAeroSpaceのウィンドウ管理設定
 
 実行前の差分は `mise bootstrap --dry-run`、現在の不足は
 `mise bootstrap status --missing` で確認できます。既存ファイルと競合する初回移行時だけ、
