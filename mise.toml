@@ -91,25 +91,15 @@ three_finger_drag = false
 [bootstrap.user]
 login_shell = "/opt/homebrew/bin/fish"
 
-[tasks."macos:spaces"]
-description = "Restore Control+1..9 shortcuts for Mission Control desktops"
+[tasks."macos:aerospace"]
+description = "Disable Mission Control shortcuts that conflict with AeroSpace"
 run = '''
 tmp_path="$(mktemp "${TMPDIR:-/tmp}/mise-symbolic-hotkeys.XXXXXX")"
 trap 'rm -f "$tmp_path"' EXIT
 defaults export com.apple.symbolichotkeys "$tmp_path"
 
-for pair in 118:18 119:19 120:20 121:21 122:23 123:22 124:26 125:28 126:25; do
-    hotkey_id="${pair%%:*}"
-    key_code="${pair##*:}"
-    /usr/libexec/PlistBuddy -c "Delete :AppleSymbolicHotKeys:${hotkey_id}" "$tmp_path" 2>/dev/null || true
-    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id} dict" "$tmp_path"
-    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:enabled bool true" "$tmp_path"
-    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:value dict" "$tmp_path"
-    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:value:type string standard" "$tmp_path"
-    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:value:parameters array" "$tmp_path"
-    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:value:parameters:0 integer 65535" "$tmp_path"
-    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:value:parameters:1 integer ${key_code}" "$tmp_path"
-    /usr/libexec/PlistBuddy -c "Add :AppleSymbolicHotKeys:${hotkey_id}:value:parameters:2 integer 262144" "$tmp_path"
+for hotkey_id in 118 119 120 121 122 123 124 125 126; do
+    /usr/libexec/PlistBuddy -c "Set :AppleSymbolicHotKeys:${hotkey_id}:enabled false" "$tmp_path"
 done
 
 defaults import com.apple.symbolichotkeys "$tmp_path"
@@ -136,6 +126,7 @@ depends = [
   "google-japanese-ime:install",
   "ghostty:install",
   "karabiner-elements:install",
+  "macos:aerospace",
   "obsidian:install",
   "raycast:install",
   "vscode:install",
