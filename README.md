@@ -89,3 +89,17 @@ mise run agents:setup
 ```
 
 Herdrのセッション、cmuxのUI設定、両者のログは端末ローカルとし、Git管理しません。
+
+### Codex stats pane
+
+Herdr内のpaneで、Codexの読み込み・書き込みtoken、累計、context使用率、CPU、メモリを
+常時表示できます。stats paneを作成したあと、そこで次を実行します。
+
+```shell
+python3 ~/gitserver/github.com/itwillrain/dotfiles/bin/herdr-codex-stats.py
+```
+
+Fishでは`hrs`でも起動できます。表示は2秒ごとに更新され、複数のCodex paneがある場合は
+tabをまたいでそれぞれの行と合計を表示します。model名と`workspace:tab/pane`も表示します。
+
+今月の実使用量も表示します。契約上限の手動管理は行いません。

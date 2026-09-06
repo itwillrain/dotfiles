@@ -61,6 +61,15 @@ abbr gsync 'git pull -p && git branch --format "%(refname:short) %(upstream:trac
 # History
 abbr h 'history'
 
+# Herdr
+abbr hr 'herdr'
+function hrs
+    python3 "$HOME/gitserver/github.com/itwillrain/dotfiles/bin/herdr-codex-stats.py" $argv
+end
+function hds
+    hrs $argv
+end
+
 # vhosts
 abbr hosts 'sudo vim /etc/hosts'
 
