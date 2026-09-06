@@ -23,6 +23,14 @@ on-window-detected = [
   { if = 'test %{app-bundle-id} = com.tinyspeck.slackmacgap', run = 'move-node-to-workspace 6' },
 ]
 
+# Keep the secondary monitor simple: workspaces 5-9 live there.
+[workspace-to-monitor-force-assignment]
+5 = "secondary"
+6 = "secondary"
+7 = "secondary"
+8 = "secondary"
+9 = "secondary"
+
 [gaps]
 inner.horizontal = 8
 inner.vertical = 8
@@ -71,7 +79,7 @@ alt-shift-8 = "move-node-to-workspace 8; workspace 8"
 alt-shift-9 = "move-node-to-workspace 9; workspace 9"
 
 # Common layout and window actions
-alt-f = "fullscreen"
+alt-f = "fullscreen --no-outer-gaps"
 alt-shift-space = "layout floating tiling"
 alt-r = "mode resize"
 
