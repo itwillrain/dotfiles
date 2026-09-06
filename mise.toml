@@ -129,6 +129,7 @@ depends = [
   "macos:aerospace",
   "obsidian:install",
   "raycast:install",
+  "thaw:install",
   "vscode:install",
   "visual-studio-code:install",
 ]
@@ -181,6 +182,10 @@ run = "test -d /Applications/Obsidian.app || brew install --cask obsidian"
 [tasks."raycast:install"]
 description = "Install Raycast through Homebrew"
 run = "test -d /Applications/Raycast.app || brew install --cask raycast"
+
+[tasks."thaw:install"]
+description = "Install Thaw menu bar manager through Homebrew"
+run = "test -d /Applications/Thaw.app || brew install --cask thaw"
 
 [tasks."visual-studio-code:install"]
 description = "Install Visual Studio Code through Homebrew"
