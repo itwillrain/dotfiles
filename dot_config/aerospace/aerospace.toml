@@ -66,6 +66,14 @@ alt-6 = "workspace 6"
 alt-7 = "workspace 7"
 alt-8 = "workspace 8"
 alt-9 = "workspace 9"
+alt-tab = "workspace --wrap-around next"
+alt-shift-tab = "workspace --wrap-around prev"
+
+# Switch monitors and move the current workspace between them
+alt-n = "focus-monitor --wrap-around next"
+alt-p = "focus-monitor --wrap-around prev"
+alt-shift-n = "move-workspace-to-monitor --wrap-around next"
+alt-shift-p = "move-workspace-to-monitor --wrap-around prev"
 
 # Move the focused window and follow it
 alt-shift-1 = "move-node-to-workspace 1; workspace 1"
