@@ -11,6 +11,13 @@ bind generic S ?git stash push -m "%(prompt Enter stash comment: )"
 bind diff  Y ?git stash pop %(stash)
 bind stash Y ?git stash pop %(stash)
 
+# M で選択中のbranchをmerge
+bind refs M ?git merge %(branch)
+
+# B で新規branchを作成して切り替え
+bind refs   B  ?git switch -c "%(prompt Enter new branch name: )" "%(branch)"
+bind status B  ?git switch -c "%(prompt Enter new branch name: )"
+
 # 差分の前後の表示行数（diff-context)を指定
 set diff-context = 4
 
@@ -46,3 +53,22 @@ bind refs    .      !sh -c "git diff %(branch) | tig"
 bind main    <Esc>. ?sh -c "git diff %(commit)..%(prompt Enter commit ID: ) | tig"
 bind diff    <Esc>. ?sh -c "git diff %(commit)..%(prompt Enter commit ID: ) | tig"
 bind refs    <Esc>. ?sh -c "git diff %(branch)..%(prompt Enter branch name: ) | tig"
+
+# GitHubをghで開く
+bind main    ;      @gh browse --commit=%(commit)
+bind diff    ;      @gh browse --commit=%(commit)
+bind refs    ;      @gh browse --commit=%(commit)
+
+bind tree    ;      @gh browse "%(file)" --branch="%(branch)"
+bind blob    ;      @gh browse "%(file)" --branch="%(branch)"
+bind grep    ;      @gh browse "%(file)" --branch="%(branch)"
+
+# Alt-; でGitHubの指定branchの該当ページを開く
+bind tree    <Esc>; @gh browse "%(file)" --branch="%(prompt Enter branch name: )"
+bind blob    <Esc>; @gh browse "%(file)" --branch="%(prompt Enter branch name: )"
+bind grep    <Esc>; @gh browse "%(file)" --branch="%(prompt Enter branch name: )"
+
+# w でPull Request作成ページを開く
+bind main    w      @gh pr create --web
+bind diff    w      @gh pr create --web
+bind refs    w      @gh pr create --web
