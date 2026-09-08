@@ -48,8 +48,6 @@ zoxide = "latest"
 "brew:tokei" = "latest"
 "brew:yq" = "latest"
 
-# The repository keeps chezmoi source names for a low-risk migration. mise
-# links them directly, so new changes no longer depend on `chezmoi apply`.
 [dotfiles]
 "~/.config/aerospace/aerospace.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/aerospace/aerospace.toml", mode = "symlink" }
 "~/.config/fish" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/fish", mode = "symlink" }
@@ -63,6 +61,9 @@ zoxide = "latest"
 "~/.ideavimrc" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_ideavimrc", mode = "symlink" }
 "~/.ssh/config" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_ssh/config", mode = "symlink" }
 "~/.tigrc" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_tigrc", mode = "symlink" }
+"~/.codex/AGENTS.md" = { source = "~/gitserver/github.com/itwillrain/dotfiles/agents/common.md", mode = "symlink" }
+"~/.claude/CLAUDE.md" = { source = "~/gitserver/github.com/itwillrain/dotfiles/agents/common.md", mode = "symlink" }
+"~/.copilot/copilot-instructions.md" = { source = "~/gitserver/github.com/itwillrain/dotfiles/agents/common.md", mode = "symlink" }
 "~/Library/Application Support/com.mitchellh.ghostty/config.ghostty" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/ghostty/config.ghostty", mode = "symlink" }
 "~/Library/Application Support/Code/User/keybindings.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/vscode/keybindings.json", mode = "symlink" }
 "~/Library/Application Support/Code/User/settings.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/vscode/settings.json", mode = "symlink" }
