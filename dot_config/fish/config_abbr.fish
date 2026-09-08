@@ -9,6 +9,8 @@ abbr cat 'bat'
 
 # Dotfile
 abbr dot 'cd ~/gitserver/github.com/itwillrain/dotfiles'
+abbr itwillrain 'cd ~/gitserver/github.com/itwillrain/'
+abbr lab 'cd ~/gitserver/github.com/team-lab/'
 
 # Docker
 abbr d 'docker'
