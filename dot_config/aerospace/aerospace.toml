@@ -22,6 +22,7 @@ on-window-detected = [
   { if = 'test %{app-bundle-id} = com.figma.Desktop', run = 'move-node-to-workspace 2' },
   { if = 'test %{app-bundle-id} = com.microsoft.VSCode', run = 'move-node-to-workspace 3' },
   { if = 'test %{app-bundle-id} = md.obsidian', run = 'layout floating' },
+  { if = 'test %{app-bundle-id} = com.apple.finder', run = 'layout floating' },
   { if = 'test %{app-bundle-id} = com.openai.codex', run = 'move-node-to-workspace 4' },
   { if = 'test %{app-bundle-id} = com.mitchellh.ghostty', run = 'move-node-to-workspace 5' },
   { if = 'test %{app-bundle-id} = com.tinyspeck.slackmacgap', run = 'move-node-to-workspace 6' },
