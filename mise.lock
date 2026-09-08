@@ -3,13 +3,13 @@
 lockfile_version = 1
 
 [[tools.aws-cli]]
-version = "2.36.39"
+version = "2.36.40"
 backend = "aqua:aws/aws-cli"
 specifiers = ["latest"]
 
 [tools.aws-cli."platforms.macos-arm64"]
-checksum = "blake3:415fdb08ed66b7edd2c0284c19d0d6c51ec8e6f53d1f8068ca1b0e7aa1074119"
-url = "https://awscli.amazonaws.com/AWSCLIV2-2.36.39.pkg"
+checksum = "blake3:5db2bdbe1a49c6b544796a62b37aea7452f706f40d8becea3f41088309084812"
+url = "https://awscli.amazonaws.com/AWSCLIV2-2.36.40.pkg"
 
 [[tools.deno]]
 version = "2.9.6"
@@ -30,14 +30,14 @@ checksum = "sha256:90493b3bbd5e10f91d12153198bf1994fd756399b4fec93b49b0c6e2acdee
 url = "https://dl.google.com/go/go1.27.0.darwin-arm64.tar.gz"
 
 [[tools.hunk]]
-version = "0.20.0"
+version = "0.20.1"
 backend = "aqua:modem-dev/hunk"
 specifiers = ["latest"]
 
 [tools.hunk."platforms.macos-arm64"]
-checksum = "sha256:96d298009d8968b2a7859961354d323e13de8f7ecf4e701ac59aab4edcc56bbb"
-url = "https://github.com/modem-dev/hunk/releases/download/v0.20.0/hunkdiff-darwin-arm64.tar.gz"
-url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/529321148"
+checksum = "sha256:b710b121df35f9ac9ccef1bdef5e2135747be404b818710313cc3db1c90f84e6"
+url = "https://github.com/modem-dev/hunk/releases/download/v0.20.1/hunkdiff-darwin-arm64.tar.gz"
+url_api = "https://api.github.com/repos/modem-dev/hunk/releases/assets/535228768"
 
 [[tools.node]]
 version = "24.20.0"
