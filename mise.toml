@@ -64,6 +64,27 @@ zoxide = "latest"
 "~/.codex/AGENTS.md" = { source = "~/gitserver/github.com/itwillrain/dotfiles/agents/common.md", mode = "symlink" }
 "~/.claude/CLAUDE.md" = { source = "~/gitserver/github.com/itwillrain/dotfiles/agents/common.md", mode = "symlink" }
 "~/.copilot/copilot-instructions.md" = { source = "~/gitserver/github.com/itwillrain/dotfiles/agents/common.md", mode = "symlink" }
+"~/.codex/skills/grill-with-docs" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/grill-with-docs", mode = "symlink" }
+"~/.codex/skills/grilling" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/grilling", mode = "symlink" }
+"~/.codex/skills/domain-modeling" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/domain-modeling", mode = "symlink" }
+"~/.codex/skills/ponytail" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/ponytail", mode = "symlink" }
+"~/.codex/skills/modern-web-guidance" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/modern-web-guidance", mode = "symlink" }
+"~/.codex/skills/vercel-react-best-practices" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/vercel-react-best-practices", mode = "symlink" }
+"~/.codex/skills/vercel-composition-patterns" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/vercel-composition-patterns", mode = "symlink" }
+"~/.claude/skills/grill-with-docs" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/grill-with-docs", mode = "symlink" }
+"~/.claude/skills/grilling" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/grilling", mode = "symlink" }
+"~/.claude/skills/domain-modeling" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/domain-modeling", mode = "symlink" }
+"~/.claude/skills/ponytail" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/ponytail", mode = "symlink" }
+"~/.claude/skills/modern-web-guidance" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/modern-web-guidance", mode = "symlink" }
+"~/.claude/skills/vercel-react-best-practices" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/vercel-react-best-practices", mode = "symlink" }
+"~/.claude/skills/vercel-composition-patterns" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/vercel-composition-patterns", mode = "symlink" }
+"~/.copilot/skills/grill-with-docs" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/grill-with-docs", mode = "symlink" }
+"~/.copilot/skills/grilling" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/grilling", mode = "symlink" }
+"~/.copilot/skills/domain-modeling" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/domain-modeling", mode = "symlink" }
+"~/.copilot/skills/ponytail" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/ponytail", mode = "symlink" }
+"~/.copilot/skills/modern-web-guidance" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/modern-web-guidance", mode = "symlink" }
+"~/.copilot/skills/vercel-react-best-practices" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/vercel-react-best-practices", mode = "symlink" }
+"~/.copilot/skills/vercel-composition-patterns" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/vercel-composition-patterns", mode = "symlink" }
 "~/Library/Application Support/com.mitchellh.ghostty/config.ghostty" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/ghostty/config.ghostty", mode = "symlink" }
 "~/Library/Application Support/Code/User/keybindings.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/vscode/keybindings.json", mode = "symlink" }
 "~/Library/Application Support/Code/User/settings.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/vscode/settings.json", mode = "symlink" }
@@ -111,6 +132,14 @@ killall SystemUIServer >/dev/null 2>&1 || true
 description = "Validate the declarative workstation configuration"
 run = ["mise fmt --check", "mise bootstrap status"]
 
+[tasks."skills:install"]
+description = "Restore agent skills from skills-lock.json"
+run = "cd \"$MISE_ORIGINAL_CWD\" && mise exec node -- npx --yes skills experimental_install"
+
+[tasks."skills:update"]
+description = "Update project-managed agent skills and skills-lock.json"
+run = "cd \"$MISE_ORIGINAL_CWD\" && mise exec node -- npx --yes skills update --project --yes"
+
 [tasks."vscode:install"]
 description = "Install the curated VS Code extensions"
 depends = ["visual-studio-code:install"]
@@ -130,6 +159,7 @@ depends = [
   "macos:aerospace",
   "obsidian:install",
   "raycast:install",
+  "skills:install",
   "thaw:install",
   "vscode:install",
   "visual-studio-code:install",
