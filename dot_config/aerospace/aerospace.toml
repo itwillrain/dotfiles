@@ -10,31 +10,35 @@ after-startup-command = [
 # AeroSpace workspaces are the primary workspace system. Keep macOS on one
 # native Space per monitor to avoid Mission Control and AeroSpace fighting.
 automatically-unhide-macos-hidden-apps = true
-persistent-workspaces = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+persistent-workspaces = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
 
 default-root-container-layout = "tiles"
 default-root-container-orientation = "auto"
 
-# Keep frequently used apps in predictable workspaces.
-# 1: Chrome, 2: Figma, 3: VS Code, 4: ChatGPT, 5: Ghostty/Herdr, 6: Slack
+# Keep only apps with a stable home in predictable workspaces.
+# 2: Figma, 3: VS Code, 7: Ghostty/Herdr, 8: Slack
 on-window-detected = [
-  { if = 'test %{app-bundle-id} = com.google.Chrome', run = 'move-node-to-workspace 1' },
   { if = 'test %{app-bundle-id} = com.figma.Desktop', run = 'move-node-to-workspace 2' },
   { if = 'test %{app-bundle-id} = com.microsoft.VSCode', run = 'move-node-to-workspace 3' },
   { if = 'test %{app-bundle-id} = md.obsidian', run = 'layout floating' },
   { if = 'test %{app-bundle-id} = com.apple.finder', run = 'layout floating' },
-  { if = 'test %{app-bundle-id} = com.openai.codex', run = 'move-node-to-workspace 4' },
-  { if = 'test %{app-bundle-id} = com.mitchellh.ghostty', run = 'move-node-to-workspace 5' },
-  { if = 'test %{app-bundle-id} = com.tinyspeck.slackmacgap', run = 'move-node-to-workspace 6' },
+  { if = 'test %{app-bundle-id} = com.mitchellh.ghostty', run = 'move-node-to-workspace 7' },
+  { if = 'test %{app-bundle-id} = com.tinyspeck.slackmacgap', run = 'move-node-to-workspace 8' },
 ]
 
-# Keep the secondary monitor simple: workspaces 5-9 live there.
+# Keep the two monitors symmetric: workspaces 1-5 on the main monitor,
+# and workspaces 6-0 on the secondary monitor.
 [workspace-to-monitor-force-assignment]
-5 = "secondary"
+1 = "main"
+2 = "main"
+3 = "main"
+4 = "main"
+5 = "main"
 6 = "secondary"
 7 = "secondary"
 8 = "secondary"
 9 = "secondary"
+0 = "secondary"
 
 [gaps]
 inner.horizontal = 8
@@ -62,6 +66,7 @@ alt-shift-k = "move up"
 alt-shift-l = "move right"
 
 # Switch workspaces
+alt-0 = "workspace 0"
 alt-1 = "workspace 1"
 alt-2 = "workspace 2"
 alt-3 = "workspace 3"
@@ -81,6 +86,7 @@ alt-shift-n = "move-workspace-to-monitor --wrap-around next"
 alt-shift-p = "move-workspace-to-monitor --wrap-around prev"
 
 # Move the focused window and follow it
+alt-shift-0 = "move-node-to-workspace 0; workspace 0"
 alt-shift-1 = "move-node-to-workspace 1; workspace 1"
 alt-shift-2 = "move-node-to-workspace 2; workspace 2"
 alt-shift-3 = "move-node-to-workspace 3; workspace 3"

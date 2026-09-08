@@ -70,6 +70,10 @@ function hds
     hrs $argv
 end
 
+# AeroSpace
+# Re-apply window rules to all existing windows
+abbr ars 'aerospace run-callback --for-every-window on-window-detected'
+
 # vhosts
 abbr hosts 'sudo vim /etc/hosts'
 
