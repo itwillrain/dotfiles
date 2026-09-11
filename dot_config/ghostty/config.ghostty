@@ -4,5 +4,5 @@ keybind = super+enter=ignore
 # Use Command+Shift+Enter for fullscreen instead.
 keybind = super+shift+enter=toggle_fullscreen
 
-# Dracula color theme.
-theme = Dracula
+# Monokai Classic color theme.
+theme = Monokai Classic
