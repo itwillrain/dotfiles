@@ -28,6 +28,8 @@ fup = fetch upstream
 	trustExitCode = true
 [pull]
 rebase = false
+[submodule]
+recurse = true
 [init]
 defaultBranch = main
 [filter "lfs"]
