@@ -89,11 +89,9 @@ abbr ls 'lsd'
 abbr mv 'mv -i'
 
 # NPM
-abbr ni 'npm install'
 abbr nisd 'npm install --save-dev'
 abbr np 'npm prune'
 abbr nl 'npm list'
-abbr nr 'npm remove'
 abbr nu 'npm update'
 abbr ns 'npm start'
 abbr nt 'npm test'
