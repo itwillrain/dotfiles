@@ -53,6 +53,7 @@ zoxide = "latest"
 "~/.config/fish" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/fish", mode = "symlink" }
 "~/.config/herdr/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/herdr/config.toml", mode = "symlink" }
 "~/.config/git" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/git", mode = "symlink" }
+"~/.config/hunk/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/hunk/config.toml", mode = "symlink" }
 "~/.config/karabiner/karabiner.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/private_karabiner/private_karabiner.json", mode = "symlink" }
 "~/.config/mise/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/mise.toml", mode = "symlink" }
 "~/.config/nvim" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nvim", mode = "symlink" }
