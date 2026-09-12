@@ -64,6 +64,7 @@ zoxide = "latest"
 "~/.ssh/config" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_ssh/config", mode = "symlink" }
 "~/.tigrc" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_tigrc", mode = "symlink" }
 "~/.codex/AGENTS.md" = { source = "~/gitserver/github.com/itwillrain/dotfiles/agents/common.md", mode = "symlink" }
+"~/.codex/skills/bro" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/bro", mode = "symlink" }
 "~/.claude/CLAUDE.md" = { source = "~/gitserver/github.com/itwillrain/dotfiles/agents/common.md", mode = "symlink" }
 "~/.copilot/copilot-instructions.md" = { source = "~/gitserver/github.com/itwillrain/dotfiles/agents/common.md", mode = "symlink" }
 "~/.codex/skills/grill-with-docs" = { source = "~/gitserver/github.com/itwillrain/dotfiles/.agents/skills/grill-with-docs", mode = "symlink" }

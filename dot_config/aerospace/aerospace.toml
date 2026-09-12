@@ -10,14 +10,15 @@ after-startup-command = [
 # AeroSpace workspaces are the primary workspace system. Keep macOS on one
 # native Space per monitor to avoid Mission Control and AeroSpace fighting.
 automatically-unhide-macos-hidden-apps = true
-persistent-workspaces = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "T"]
+persistent-workspaces = ["0", "3", "T"]
 
 default-root-container-layout = "tiles"
 default-root-container-orientation = "auto"
 
 # Keep only apps with a stable home in predictable workspaces.
-# 3: VS Code, 9: Figma, 0: Slack, T: Ghostty/Herdr
+# 2: Firefox, 3: VS Code, 9: Figma, 0: Slack, T: Ghostty/Herdr
 on-window-detected = [
+  { if = 'test %{app-bundle-id} = org.mozilla.firefox', run = 'move-node-to-workspace 2' },
   { if = 'test %{app-bundle-id} = com.microsoft.VSCode', run = 'move-node-to-workspace 3' },
   { if = 'test %{app-bundle-id} = com.figma.Desktop', run = 'move-node-to-workspace 9' },
   { if = 'test %{app-bundle-id} = md.obsidian', run = 'layout floating' },
