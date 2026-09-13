@@ -48,6 +48,7 @@ zoxide = "latest"
 "brew:terminal-notifier" = "latest"
 "brew:tig" = "latest"
 "brew:tokei" = "latest"
+"brew:tree-sitter-cli" = "latest"
 "brew:yq" = "latest"
 
 [dotfiles]
