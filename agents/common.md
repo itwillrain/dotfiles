@@ -23,6 +23,74 @@
 - Make reasonable assumptions and state them when they affect the result.
 - Validate changes with the smallest relevant check or test.
 
+## Obsidian Vault workflow
+
+### Principles
+
+- Use Obsidian as the hub for retaining work-related memory, decisions, and knowledge.
+- Treat formal information in Google Slides, Backlog, Slack, and other services as authoritative in those services.
+- Keep understanding, context, decisions, and next actions in Obsidian.
+- Inspect the current state of the Vault before making changes.
+- Do not unintentionally delete existing note content, links, or attachments.
+
+### At the start of work
+
+1. Check `00_Home/ホーム.md` first.
+2. Check related project notes, `Inbox`, and `Knowledge` as needed.
+3. If a related note already exists, consider appending to it instead of creating a new note.
+4. If the project name, purpose, or destination is unclear, use `01_Inbox/`.
+
+### Directories
+
+- `00_Home/`: Home, entry point, and operating rules
+- `01_Inbox/`: Unclassified notes, daily notes, and incoming attachments
+- `10_Projects/<project-name>/`: Project-specific information
+- `20_Knowledge/`: Knowledge that can be reused across projects
+- `30_Operations/`: Recurring work such as recruiting, 1-on-1s, and reports
+- `40_Templates/`: Note templates
+- `90_Archive/`: Completed or archived notes
+
+### Saving notes
+
+- "Take a note": Save it in `01_Inbox/` by default.
+- If a project is specified: Save it in `10_Projects/<project-name>/`.
+- If asked to generalize or make it reusable: Organize it in `20_Knowledge/`.
+- For recurring operational work: Save it in `30_Operations/`.
+- If classification is unclear, do not decide unilaterally. Leave the note in `01_Inbox/`.
+
+### Creating notes
+
+- Keep one topic per note.
+- Structure technical research with "Question", "Context", "Hypothesis", "Investigation", "Conclusion", and "Next actions".
+- Record design decisions in ADR format.
+- Write Mermaid diagrams in code fences tagged `mermaid`.
+- Use `type`, `status`, and `created` as the basic Frontmatter fields.
+- Add `project` only to project-specific notes.
+
+### Hub workflow
+
+- Treat `00_Home/ホーム.md` as the entry point to the Vault.
+- Keep only active projects, important decisions, unprocessed notes, frequently used knowledge, and templates on the Home note.
+- Do not add every note to the Home note.
+- When creating an important note, decide whether it needs a link from the Home note.
+- At the end of work, review changed notes, unresolved issues, and next actions.
+
+### Safety rules
+
+- Do not delete, overwrite, or move large groups of notes without an explicit request.
+- When deleting something, move it to `90_Archive/` when possible.
+- Do not commit, push, sync, share, or publish without an explicit request.
+- Do not store or display cookies, webhook URLs, API keys, access tokens, or passwords.
+- If you find secret information, report only its location and never display its value.
+- Before sending information to an external service, state the destination and the content being sent.
+
+### At the end of work
+
+- Confirm that created and edited files exist.
+- After moving notes, check for old paths and broken links.
+- Confirm that wiki links and image or file embeds are intact.
+- Report the changes and the reason for each note classification.
+
 ## Testing and TDD
 
 - For behavior changes and bug fixes, follow Kent Beck's TDD cycle: Red, Green, Refactor.

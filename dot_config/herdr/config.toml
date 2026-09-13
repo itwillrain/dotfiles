@@ -2,6 +2,9 @@ onboarding = false
 [theme]
 name = "dracula"
 
+[keys]
+open_notification_target = "prefix+o"
+
 [terminal]
 default_shell = "/opt/homebrew/bin/fish"
 shell_mode = "auto"
@@ -9,6 +12,10 @@ shell_mode = "auto"
 [ui]
 agent_panel_sort = "spaces"
 status_indicators = "symbols"
+
+[ui.toast]
+delivery = "herdr"
+delay_seconds = 0
 
 [ui.sidebar.agents]
 row_gap = 0
