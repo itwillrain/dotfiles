@@ -11,12 +11,14 @@ task.run_auto_install = false
 # their own mise.toml without changing this repository.
 [tools]
 aws-cli = "latest"
+"cargo:cargo-seek" = "latest"
 deno = "latest"
 go = "latest"
 hunk = "latest"
 node = "lts"
 "npm:@google/clasp" = "latest"
 python = "latest"
+rust = "stable"
 starship = "latest"
 zoxide = "latest"
 

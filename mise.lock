@@ -11,6 +11,11 @@ specifiers = ["latest"]
 checksum = "blake3:5db2bdbe1a49c6b544796a62b37aea7452f706f40d8becea3f41088309084812"
 url = "https://awscli.amazonaws.com/AWSCLIV2-2.36.40.pkg"
 
+[[tools."cargo:cargo-seek"]]
+version = "0.2.0"
+backend = "cargo:cargo-seek"
+specifiers = ["latest"]
+
 [[tools.deno]]
 version = "2.9.6"
 backend = "core:deno"
@@ -62,6 +67,11 @@ specifiers = ["latest"]
 checksum = "sha256:4632cb1a6edad9e73d3c81b6d2e69131637d995173e3e85005df14102b0592ba"
 url = "https://github.com/astral-sh/python-build-standalone/releases/download/20260901/cpython-3.14.7+20260901-aarch64-apple-darwin-install_only_stripped.tar.gz"
 provenance = "github-attestations"
+
+[[tools.rust]]
+version = "stable"
+backend = "core:rust"
+specifiers = ["stable"]
 
 [[tools.starship]]
 version = "1.26.0"
