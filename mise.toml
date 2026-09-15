@@ -23,6 +23,7 @@ zoxide = "latest"
 # Keep the workstation baseline intentionally small. Add application-specific
 # packages only after they have proved useful on every machine.
 [bootstrap.packages]
+"brew:atuin" = "latest"
 "brew:bat" = "latest"
 "brew:coreutils" = "latest"
 "brew:colima" = "latest"
@@ -45,6 +46,7 @@ zoxide = "latest"
 "brew:ni" = "latest"
 "brew:pandoc" = "latest"
 "brew:ripgrep" = "latest"
+"brew:taproom" = "latest"
 "brew:terminal-notifier" = "latest"
 "brew:tig" = "latest"
 "brew:tokei" = "latest"
