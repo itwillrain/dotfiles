@@ -1,0 +1,10 @@
+# Keep history local to this machine.
+auto_sync = false
+update_check = false
+
+# Up-arrow searches the current shell session; Ctrl-R can cycle all scopes.
+filter_mode_shell_up_key_binding = "session"
+workspaces = true
+
+[search]
+filters = ["global", "host", "session", "directory", "workspace"]

@@ -55,6 +55,7 @@ zoxide = "latest"
 
 [dotfiles]
 "~/.config/aerospace/aerospace.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/aerospace/aerospace.toml", mode = "symlink" }
+"~/.config/atuin/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/atuin/config.toml", mode = "symlink" }
 "~/.config/fish" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/fish", mode = "symlink" }
 "~/.config/herdr/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/herdr/config.toml", mode = "symlink" }
 "~/.config/git" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/git", mode = "symlink" }
