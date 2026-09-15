@@ -31,7 +31,7 @@
   },
   "workbench.iconTheme": "vscode-icons",
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "terminal.integrated.fontFamily": "SauceCodePro Nerd Font Mono",
+  "terminal.integrated.fontFamily": "UDEV Gothic NFLG",
   "terminal.integrated.defaultProfile.osx": "fish",
   "terminal.integrated.profiles.osx": {
     "fish": {
@@ -72,7 +72,15 @@
   "[shellscript]": {
     "editor.defaultFormatter": "foxundermoon.shell-format",
   },
-  "editor.fontLigatures": false,
+  "editor.fontLigatures": true,
   "telemetry.telemetryLevel": "off",
   "workbench.colorTheme": "Monokai Pro (Filter Spectrum)",
+  "extensions.experimental.affinity": {
+    "asvetliakov.vscode-neovim": 1,
+  },
+  "gitlens.graph.details.location": "auto",
+  "chat.mcp.gallery.enabled": true,
+  "extensions.supportAgentsWindow": {
+    "monokai.theme-monokai-pro-vscode": true,
+  },
 }

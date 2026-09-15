@@ -1,5 +1,5 @@
 theme = "monokai-retro"
-mode = "split"
+mode = "auto"
 line_numbers = true
 wrap_lines = false
 hunk_headers = true
