@@ -16,6 +16,11 @@ version = "0.2.0"
 backend = "cargo:cargo-seek"
 specifiers = ["latest"]
 
+[[tools."cargo:ghgrab"]]
+version = "2.0.2"
+backend = "cargo:ghgrab"
+specifiers = ["latest"]
+
 [[tools.deno]]
 version = "2.9.6"
 backend = "core:deno"
