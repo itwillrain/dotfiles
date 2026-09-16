@@ -163,6 +163,7 @@ depends = [
   "aerospace:install",
   "alt-tab:install",
   "chatgpt:install",
+  "codex:install",
   "figma:install",
   "fonts:install",
   "google-chrome:install",
@@ -191,6 +192,16 @@ run = "test -d /Applications/AltTab.app || brew install --cask alt-tab"
 [tasks."chatgpt:install"]
 description = "Install ChatGPT through Homebrew"
 run = "test -d /Applications/ChatGPT.app || brew install --cask chatgpt"
+
+[tasks."codex:install"]
+description = "Install or update Codex through Homebrew"
+run = '''
+if brew list --cask codex >/dev/null 2>&1; then
+    brew upgrade --cask codex
+else
+    brew install --cask codex
+fi
+'''
 
 [tasks."ghostty:install"]
 description = "Install Ghostty through Homebrew"
