@@ -7,6 +7,12 @@ after-startup-command = [
   'exec-and-forget open -a /Applications/RunCatNeo.app',
 ]
 
+# Show the destination workspace briefly through Hammerspoon.
+exec-on-workspace-change = [
+  '/bin/bash', '-c',
+  'monitor=$(/opt/homebrew/bin/aerospace list-monitors --focused --format %{monitor-appkit-nsscreen-screens-id} 2>/dev/null); "$HOME/.local/bin/hs" -c "show_workspace([[$AEROSPACE_FOCUSED_WORKSPACE]], [[$monitor]])" >/dev/null 2>&1',
+]
+
 # AeroSpace workspaces are the primary workspace system. Keep macOS on one
 # native Space per monitor to avoid Mission Control and AeroSpace fighting.
 automatically-unhide-macos-hidden-apps = true

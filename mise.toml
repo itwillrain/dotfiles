@@ -62,6 +62,7 @@ zoxide = "latest"
 "~/.config/atuin/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/atuin/config.toml", mode = "symlink" }
 "~/.config/fish" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/fish", mode = "symlink" }
 "~/.config/herdr/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/herdr/config.toml", mode = "symlink" }
+"~/.hammerspoon" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/hammerspoon", mode = "symlink" }
 "~/.config/git" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/git", mode = "symlink" }
 "~/.config/hunk/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/hunk/config.toml", mode = "symlink" }
 "~/.config/leaf/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/leaf/config.toml", mode = "symlink" }
@@ -170,6 +171,7 @@ depends = [
   "google-chrome:install",
   "google-japanese-ime:install",
   "ghostty:install",
+  "hammerspoon:install",
   "karabiner-elements:install",
   "macos:aerospace",
   "obsidian:install",
@@ -207,6 +209,13 @@ fi
 [tasks."ghostty:install"]
 description = "Install Ghostty through Homebrew"
 run = "test -d /Applications/Ghostty.app || brew install --cask ghostty"
+
+[tasks."hammerspoon:install"]
+description = "Install Hammerspoon through Homebrew"
+run = '''
+test -d /Applications/Hammerspoon.app || brew install --cask hammerspoon
+mkdir -p "$HOME/.local/bin" "$HOME/.local/share/man/man1"
+'''
 
 [tasks."figma:install"]
 description = "Install Figma through Homebrew"
