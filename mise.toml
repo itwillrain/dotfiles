@@ -122,6 +122,7 @@ three_finger_drag = false
 "NSGlobalDomain" = { AppleShowAllExtensions = true, ApplePressAndHoldEnabled = "0" }
 "com.apple.dock" = { tilesize = 36.0, largesize = 16.0, "minimize-to-application" = false }
 "com.apple.finder" = { AppleShowAllFiles = "TRUE" }
+"com.apple.WindowManager" = { EnableStandardClickToShowDesktop = false }
 
 [bootstrap.user]
 login_shell = "/opt/homebrew/bin/fish"
