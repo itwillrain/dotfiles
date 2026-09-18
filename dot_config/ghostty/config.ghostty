@@ -7,6 +7,7 @@ keybind = super+shift+enter=toggle_fullscreen
 # Monokai Classic color theme.
 theme = Monokai Classic
 
-# UDEV Gothic includes Japanese glyphs, Nerd Font icons, and programming ligatures.
+# JetBrains Mono for Latin text, with UDEV Gothic as the CJK and Nerd Font fallback.
+font-family = JetBrains Mono
 font-family = UDEV Gothic NFLG
 font-feature = liga,calt
