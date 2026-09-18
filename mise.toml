@@ -48,6 +48,7 @@ zoxide = "latest"
 "brew:lsd" = "latest"
 "brew:neovim" = "latest"
 "brew:ni" = "latest"
+"brew:nushell" = "latest"
 "brew:pandoc" = "latest"
 "brew:ripgrep" = "latest"
 "brew:taproom" = "latest"
@@ -63,6 +64,9 @@ zoxide = "latest"
 "~/.config/fish" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/fish", mode = "symlink" }
 "~/.config/herdr/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/herdr/config.toml", mode = "symlink" }
 "~/.hammerspoon" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/hammerspoon", mode = "symlink" }
+"~/Library/Application Support/nushell/config.nu" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nushell/config.nu", mode = "symlink" }
+"~/Library/Application Support/nushell/env.nu" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nushell/env.nu", mode = "symlink" }
+"~/Library/Application Support/nushell/powerlevel10k_lean.omp.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nushell/powerlevel10k_lean.omp.json", mode = "symlink" }
 "~/.config/git" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/git", mode = "symlink" }
 "~/.config/hunk/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/hunk/config.toml", mode = "symlink" }
 "~/.config/leaf/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/leaf/config.toml", mode = "symlink" }
@@ -172,6 +176,7 @@ depends = [
   "google-japanese-ime:install",
   "ghostty:install",
   "hammerspoon:install",
+  "oh-my-posh:install",
   "karabiner-elements:install",
   "macos:aerospace",
   "obsidian:install",
@@ -216,6 +221,10 @@ run = '''
 test -d /Applications/Hammerspoon.app || brew install --cask hammerspoon
 mkdir -p "$HOME/.local/bin" "$HOME/.local/share/man/man1"
 '''
+
+[tasks."oh-my-posh:install"]
+description = "Install Oh My Posh through Homebrew"
+run = "command -v oh-my-posh >/dev/null 2>&1 || brew install jandedobbeleer/oh-my-posh/oh-my-posh"
 
 [tasks."figma:install"]
 description = "Install Figma through Homebrew"
