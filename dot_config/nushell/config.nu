@@ -1,5 +1,6 @@
 # Shared Nushell configuration.
 use ($nu.default-config-dir | path join "mise.nu")
+source ($nu.default-config-dir | path join "aliases.nu")
 
 $env.config.buffer_editor = "nvim"
 

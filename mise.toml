@@ -66,6 +66,7 @@ zoxide = "latest"
 "~/.hammerspoon" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/hammerspoon", mode = "symlink" }
 "~/Library/Application Support/nushell/config.nu" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nushell/config.nu", mode = "symlink" }
 "~/Library/Application Support/nushell/env.nu" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nushell/env.nu", mode = "symlink" }
+"~/Library/Application Support/nushell/aliases.nu" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nushell/aliases.nu", mode = "symlink" }
 "~/Library/Application Support/nushell/powerlevel10k_lean.omp.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nushell/powerlevel10k_lean.omp.json", mode = "symlink" }
 "~/.config/git" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/git", mode = "symlink" }
 "~/.config/hunk/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/hunk/config.toml", mode = "symlink" }
