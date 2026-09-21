@@ -21,25 +21,25 @@ bind status B  ?git switch -c "%(prompt Enter new branch name: )"
 # 差分の前後の表示行数（diff-context)を指定
 set diff-context = 4
 
-# color default         white   black
-color   cursor          black   green
+# Catppuccin Mocha maps tig's ANSI colors through the terminal palette.
+color   cursor          black   magenta
 color   search-result   black   yellow
 
 # color author          green   black
 
 # color status          green   black
-color   line-number     red     black
-color   title-focus     black   yellow
-color   title-blur      black   magenta
+color   line-number     magenta  default
+color   title-focus     black   magenta
+color   title-blur      white   default
 
 # Diff colors
-color diff-header       yellow  default
+color diff-header       magenta default
 color diff-index        blue    default
-color diff-chunk        magenta default
+color diff-chunk        cyan    default
 color "Reported-by:"    green   default
 
 # View-specific color
-color tree.date         black   cyan    bold
+color tree.date         cyan    default bold
 
 bind main   D !git diff %(commit)
 bind status D !git diff -- %(file)

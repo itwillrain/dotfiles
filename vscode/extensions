@@ -20,12 +20,12 @@ ms-vscode-remote.remote-containers
 naumovs.color-highlight
 pranaygp.vscode-css-peek
 robbowen.synthwave-vscode
-monokai.theme-monokai-pro-vscode
+catppuccin.catppuccin-vsc
+catppuccin.catppuccin-vsc-icons
 skyapps.fish-vscode
 streetsidesoftware.code-spell-checker
 stylelint.vscode-stylelint
 tamasfe.even-better-toml
-vscode-icons-team.vscode-icons
 vue.volar
 wayou.vscode-todo-highlight
 yzhang.markdown-all-in-one

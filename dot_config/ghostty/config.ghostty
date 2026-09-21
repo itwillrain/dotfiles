@@ -4,10 +4,11 @@ keybind = super+enter=ignore
 # Use Command+Shift+Enter for fullscreen instead.
 keybind = super+shift+enter=toggle_fullscreen
 
-# Monokai Classic color theme.
-theme = Monokai Classic
+# Catppuccin Mocha color theme.
+theme = Catppuccin Mocha
 
 # JetBrains Mono for Latin text, with UDEV Gothic as the CJK and Nerd Font fallback.
 font-family = JetBrains Mono
 font-family = UDEV Gothic NFLG
 font-feature = liga,calt
+font-size = 14

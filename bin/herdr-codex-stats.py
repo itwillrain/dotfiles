@@ -20,10 +20,10 @@ from typing import Any
 ANSI_CLEAR = "\033[2J\033[H"
 ANSI_DIM = "\033[2m"
 ANSI_RESET = "\033[0m"
-ANSI_CYAN = "\033[36m"
-ANSI_GREEN = "\033[32m"
-ANSI_YELLOW = "\033[33m"
-ANSI_RED = "\033[31m"
+ANSI_MAUVE = "\033[38;2;203;166;247m"
+ANSI_GREEN = "\033[38;2;166;227;161m"
+ANSI_YELLOW = "\033[38;2;249;226;175m"
+ANSI_RED = "\033[38;2;243;139;168m"
 
 
 @dataclass
@@ -348,7 +348,7 @@ def render(home: Path, show_titles: bool = False) -> str:
 
     now = time.strftime("%H:%M:%S")
     lines = [
-        paint(f"CODEX STATS  {now}  ·  {len(panes)} agents  ·  {len(tabs)} tabs", ANSI_CYAN),
+        paint(f"CODEX STATS  {now}  ·  {len(panes)} agents  ·  {len(tabs)} tabs", ANSI_MAUVE),
         paint("─" * min(terminal_width, 72), ANSI_DIM),
         "",
     ]
@@ -370,7 +370,7 @@ def render(home: Path, show_titles: bool = False) -> str:
                 f"MONTH  Read {compact_number(month_usage.input_tokens)}  ·  "
                 f"Write {compact_number(month_usage.output_tokens)}  ·  "
                 f"Total {compact_number(month_usage.total_tokens)}",
-                ANSI_CYAN,
+                ANSI_MAUVE,
             ),
             "",
         ]
