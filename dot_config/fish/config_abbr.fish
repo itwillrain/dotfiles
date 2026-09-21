@@ -60,6 +60,16 @@ abbr gsync 'git pull -p && git branch --format "%(refname:short) %(upstream:trac
 | awk \'{print $1}\' \
 | xargs git branch -d'
 
+# Open a ghq-managed repository with LazyVim.
+function ghq-open
+    set -l repo (ghq list --full-path | fzf --height 40% --reverse --prompt 'repo > ')
+    if test -z "$repo"
+        return
+    end
+    cd "$repo"
+    nvim .
+end
+
 # History
 abbr h 'history'
 
