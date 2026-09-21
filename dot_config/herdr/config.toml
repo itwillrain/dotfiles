@@ -1,20 +1,32 @@
 onboarding = false
 [theme]
-name = "dracula"
+name = "catppuccin"
 
 [theme.custom]
-sidebar_bg = "#272822"
-active_row_bg = "#3e3d32"
-selection_bg = "#49483e"
-panel_bg = "#272822"
-accent = "#a6e22e"
-red = "#f92672"
-green = "#a6e22e"
+sidebar_bg = "#181825"
+active_row_bg = "#313244"
+selection_bg = "#45475a"
+panel_bg = "#1e1e2e"
+accent = "#cba6f7"
+red = "#f38ba8"
+green = "#a6e3a1"
 
 [keys]
 open_notification_target = "prefix+o"
 previous_agent = "prefix+["
 next_agent = "prefix+]"
+focus_pane_left = ["prefix+h", "ctrl+alt+h"]
+focus_pane_down = ["prefix+j", "ctrl+alt+j"]
+focus_pane_up = ["prefix+k", "ctrl+alt+k"]
+focus_pane_right = ["prefix+l", "ctrl+alt+l"]
+previous_tab = ["prefix+p", "ctrl+alt+["]
+next_tab = ["prefix+n", "ctrl+alt+]"]
+new_tab = ["prefix+c", "ctrl+alt+c"]
+split_vertical = ["prefix+v", "ctrl+alt+d"]
+split_horizontal = ["prefix+minus", "ctrl+alt+shift+d"]
+zoom = ["prefix+z", "ctrl+alt+z"]
+navigate_workspace_up = ["ctrl + k"]
+navigate_workspace_down = ["ctrl + j"]
 
 [terminal]
 default_shell = "/opt/homebrew/bin/fish"
@@ -25,7 +37,7 @@ agent_panel_sort = "priority"
 status_indicators = "symbols"
 
 [ui.toast]
-delivery = "herdr"
+delivery = "system"
 delay_seconds = 0
 
 [ui.sidebar.agents]
