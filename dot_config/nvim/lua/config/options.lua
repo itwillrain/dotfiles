@@ -11,6 +11,7 @@ opt.splitbelow = true
 opt.splitright = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
+opt.swapfile = false
 opt.undofile = true
 opt.updatetime = 300
 opt.clipboard:append("unnamedplus")
