@@ -30,15 +30,18 @@ return {
 				sources = {
 					explorer = {
 						icons = {
-							files = {
-								dir = " ",
-								dir_open = " ",
-								file = " ",
-							},
 							tree = {
-								vertical = "│ ",
-								middle = "├─",
-								last = "└─",
+								vertical = "│  ",
+								middle = "├─ ",
+								last = "└─ ",
+							},
+						},
+						layout = {
+							preset = "sidebar",
+							preview = false,
+							layout = {
+								width = 34,
+								min_width = 34,
 							},
 						},
 					},
