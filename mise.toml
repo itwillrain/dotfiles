@@ -34,6 +34,7 @@ zoxide = "latest"
 "brew:colima" = "latest"
 "brew:docker" = "latest"
 "brew:docker-compose" = "latest"
+"brew:diffnav" = "latest"
 "brew:fd" = "latest"
 "brew:fish" = "latest"
 "brew:fzf" = "latest"
@@ -48,6 +49,7 @@ zoxide = "latest"
 "brew:jq" = "latest"
 "brew:leaf-markdown-viewer" = "latest"
 "brew:lsd" = "latest"
+"brew:lazygit" = "latest"
 "brew:neovim" = "latest"
 "brew:nb" = "latest"
 "brew:ni" = "latest"
@@ -74,6 +76,7 @@ zoxide = "latest"
 "~/Library/Application Support/nushell/aliases.nu" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nushell/aliases.nu", mode = "symlink" }
 "~/Library/Application Support/nushell/powerlevel10k_lean.omp.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nushell/powerlevel10k_lean.omp.json", mode = "symlink" }
 "~/.config/git" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/git", mode = "symlink" }
+"~/.config/gh-dash/config.yml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/gh-dash/config.yml", mode = "symlink" }
 "~/.config/hunk/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/hunk/config.toml", mode = "symlink" }
 "~/.config/leaf/config.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/leaf/config.toml", mode = "symlink" }
 "~/.config/karabiner/karabiner.json" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/private_karabiner/private_karabiner.json", mode = "symlink" }
@@ -176,6 +179,16 @@ fish -c '
 '
 '''
 
+[tasks."gh-dash:install"]
+description = "Install or update the gh-dash GitHub CLI extension"
+run = '''
+if gh extension list | rg -q 'dlvhdr/gh-dash|[[:space:]]dash([[:space:]]|$)'; then
+    gh extension upgrade dash
+else
+    gh extension install dlvhdr/gh-dash
+fi
+'''
+
 [tasks."skills:update"]
 description = "Update project-managed agent skills and skills-lock.json"
 run = "cd \"$MISE_ORIGINAL_CWD\" && mise exec node -- npx --yes skills update --project --yes"
@@ -197,6 +210,7 @@ depends = [
   "google-chrome:install",
   "google-japanese-ime:install",
   "ghostty:install",
+  "gh-dash:install",
   "hammerspoon:install",
   "oh-my-posh:install",
   "ovim:install",
