@@ -2,7 +2,7 @@ return {
 	{
 		"folke/snacks.nvim",
 		init = function()
-			vim.api.nvim_create_autocmd({ "VimEnter", "BufWinEnter" }, {
+			vim.api.nvim_create_autocmd("VimEnter", {
 				callback = function(event)
 					vim.schedule(function()
 						if not vim.api.nvim_buf_is_valid(event.buf) or vim.bo[event.buf].buftype ~= "" then
