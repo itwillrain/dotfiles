@@ -2,6 +2,21 @@ return {
 	{
 		"folke/snacks.nvim",
 		init = function()
+			local function open_explorer(root)
+				if not root or root == "" then
+					return
+				end
+
+				local git_marker = root .. "/.git"
+				if vim.fn.isdirectory(git_marker) == 0 and vim.fn.filereadable(git_marker) == 0 then
+					return
+				end
+
+				if #Snacks.picker.get({ source = "explorer" }) == 0 then
+					Snacks.explorer({ cwd = root, enter = false })
+				end
+			end
+
 			vim.api.nvim_create_autocmd("VimEnter", {
 				callback = function(event)
 					vim.schedule(function()
@@ -14,15 +29,15 @@ return {
 							return
 						end
 
-						local root = LazyVim.root()
-						local git_marker = root .. "/.git"
-						if vim.fn.isdirectory(git_marker) == 0 and vim.fn.filereadable(git_marker) == 0 then
-							return
-						end
+						open_explorer(LazyVim.root())
+					end)
+				end,
+			})
 
-						if #Snacks.picker.get({ source = "explorer" }) == 0 then
-							Snacks.explorer({ cwd = root, enter = false })
-						end
+			vim.api.nvim_create_autocmd("DirChanged", {
+				callback = function()
+					vim.schedule(function()
+						open_explorer(LazyVim.root())
 					end)
 				end,
 			})
