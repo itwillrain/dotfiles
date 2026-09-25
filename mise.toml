@@ -28,6 +28,7 @@ zoxide = "latest"
 # packages only after they have proved useful on every machine.
 [bootstrap.packages]
 "brew:atuin" = "latest"
+"brew:bash" = "latest"
 "brew:bat" = "latest"
 "brew:coreutils" = "latest"
 "brew:colima" = "latest"
@@ -48,6 +49,7 @@ zoxide = "latest"
 "brew:leaf-markdown-viewer" = "latest"
 "brew:lsd" = "latest"
 "brew:neovim" = "latest"
+"brew:nb" = "latest"
 "brew:ni" = "latest"
 "brew:nushell" = "latest"
 "brew:pandoc" = "latest"
@@ -79,6 +81,7 @@ zoxide = "latest"
 "~/.config/nvim" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/nvim", mode = "symlink" }
 "~/.config/starship.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/starship.toml", mode = "symlink" }
 "~/.gitconfig" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_gitconfig", mode = "symlink" }
+"~/.nbrc" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_nbrc", mode = "symlink" }
 "~/.ideavimrc" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_ideavimrc", mode = "symlink" }
 "~/.ssh/config" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_ssh/config", mode = "symlink" }
 "~/.tigrc" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_tigrc", mode = "symlink" }
