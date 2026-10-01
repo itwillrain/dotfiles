@@ -75,12 +75,6 @@ abbr h 'history'
 
 # Herdr
 abbr hr 'herdr'
-function hrs
-    python3 "$HOME/gitserver/github.com/itwillrain/dotfiles/bin/herdr-codex-stats.py" $argv
-end
-function hds
-    hrs $argv
-end
 
 # AeroSpace
 # Re-apply window rules to all existing windows
