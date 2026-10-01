@@ -1,0 +1,18 @@
+#:schema https://developers.openai.com/codex/config-schema.json
+
+# User preferences only. Machine-generated integrations and local state are
+# intentionally excluded from this managed file.
+theme = "Dracula"
+model = "gpt-5.6-luna"
+model_reasoning_effort = "xhigh"
+service_tier = "default"
+
+[desktop]
+followUpQueueMode = "steer"
+conversationDetailMode = "STEPS_PROSE"
+ambient-suggestions-enabled = true
+external-agent-import-sync-enabled = true
+composerEnterBehavior = "cmdAlways"
+
+[features]
+hooks = true
