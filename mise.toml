@@ -203,6 +203,7 @@ run = "xargs -n 1 code --install-extension < \"$MISE_ORIGINAL_CWD/vscode/extensi
 [tasks.bootstrap]
 depends = [
   "aerospace:install",
+  "aerokit:install",
   "alt-tab:install",
   "chatgpt:install",
   "codex:install",
@@ -231,6 +232,10 @@ depends = [
 [tasks."aerospace:install"]
 description = "Install AeroSpace via its official Homebrew tap"
 run = "test -d /Applications/AeroSpace.app || brew install --cask nikitabobko/tap/aerospace"
+
+[tasks."aerokit:install"]
+description = "Install AeroKit via its official Homebrew tap"
+run = "test -d /Applications/AeroKit.app || brew install --cask jomatsu/tap/aerokit"
 
 [tasks."alt-tab:install"]
 description = "Install AltTab through Homebrew"
