@@ -220,7 +220,7 @@ depends = [
   "obsidian:install",
   "raycast:install",
   "skills:install",
-  "thaw:install",
+  "ice:install",
   "vscode:install",
   "visual-studio-code:install",
 ]
@@ -299,9 +299,9 @@ run = "test -d /Applications/Obsidian.app || brew install --cask obsidian"
 description = "Install Raycast through Homebrew"
 run = "test -d /Applications/Raycast.app || brew install --cask raycast"
 
-[tasks."thaw:install"]
-description = "Install Thaw menu bar manager through Homebrew"
-run = "test -d /Applications/Thaw.app || brew install --cask thaw"
+[tasks."ice:install"]
+description = "Install Ice menu bar manager through Homebrew"
+run = "test -d /Applications/Ice.app || brew install --cask jordanbaird-ice"
 
 [tasks."visual-studio-code:install"]
 description = "Install Visual Studio Code through Homebrew"
