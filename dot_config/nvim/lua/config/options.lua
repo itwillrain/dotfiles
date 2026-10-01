@@ -16,3 +16,4 @@ opt.undofile = true
 opt.updatetime = 300
 opt.clipboard:append("unnamedplus")
 opt.helplang = "ja"
+opt.spelllang = { "en", "cjk" }
