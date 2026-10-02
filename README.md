@@ -81,14 +81,14 @@ colima start
 
 ## AI agent workflow
 
-Codex の並列作業とセッション維持に cmux と Herdr を使います。
+Codex の並列作業とセッション維持に Herdr を使います。
 本体は `mise bootstrap` で導入し、初回だけCodex連携を有効化します。
 
 ```shell
 mise run agents:setup
 ```
 
-Herdrのセッション、cmuxのUI設定、両者のログは端末ローカルとし、Git管理しません。
+Herdrのセッションとログは端末ローカルとし、Git管理しません。
 
 ## Markdown とノートのショートカット
 
