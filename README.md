@@ -89,3 +89,31 @@ mise run agents:setup
 ```
 
 Herdrのセッション、cmuxのUI設定、両者のログは端末ローカルとし、Git管理しません。
+
+## Markdown とノートのショートカット
+
+Neovim で開いている Markdown を、Herdr のペインで確認できます。
+`<leader>` は LazyVim の標準（Space）です。Herdr の中で Neovim を起動したときだけ、
+ペイン操作のキーが動きます。
+
+| キー | 動作 |
+| --- | --- |
+| `<leader>ml` | 保存して、フロートで leaf を開く |
+| `<leader>mw` | 右ペインで `leaf --watch` を開く／閉じる |
+| `<leader>mW` | 下ペインで `leaf --watch` を開く／閉じる |
+| `<leader>mm` | 下ペインに Mermaid の図を画像で表示する／閉じる |
+
+- `leaf --watch` は保存のたびに自動で再読み込みします。Mermaid は開いたときに一度だけ描画するため、
+  図を直したら閉じて開き直してください。
+- Mermaid の画像表示には、Kitty graphics 対応の端末（Ghostty）と `chafa`、`mermaid-cli`、
+  Google Chrome が必要です。Herdr 側は `terminal.kitty_graphics`（標準で true）で通します。
+- Herdr の標準キーで、`prefix+shift+H/J/K/L` がフォーカス中のペインと隣のペインの入れ替えです。
+
+nb のノートは、Fish の関数から操作します。
+
+| コマンド | 動作 |
+| --- | --- |
+| `today` | 今日の日次ノートを開く（なければテンプレートから作る） |
+| `tasks` | 全ノートの未完了タスク（`- [ ]`）を一覧する |
+| `know <タグ> <タイトル>` | knowledge ノートをテンプレートから作る |
+| `mermaid <file>` | Markdown 内の Mermaid の図を画像で表示する |
