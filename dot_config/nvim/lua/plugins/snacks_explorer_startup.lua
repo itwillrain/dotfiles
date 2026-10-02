@@ -1,6 +1,16 @@
 return {
 	{
 		"folke/snacks.nvim",
+		opts = {
+			picker = {
+				sources = {
+					explorer = {
+						hidden = true,
+						ignored = true,
+					},
+				},
+			},
+		},
 		init = function()
 			local function open_explorer(root)
 				if not root or root == "" then

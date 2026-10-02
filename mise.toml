@@ -206,6 +206,7 @@ depends = [
   "aerokit:install",
   "alt-tab:install",
   "chatgpt:install",
+  "coteditor:install",
   "codex:install",
   "figma:install",
   "fonts:install",
@@ -244,6 +245,10 @@ run = "test -d /Applications/AltTab.app || brew install --cask alt-tab"
 [tasks."chatgpt:install"]
 description = "Install ChatGPT through Homebrew"
 run = "test -d /Applications/ChatGPT.app || brew install --cask chatgpt"
+
+[tasks."coteditor:install"]
+description = "Install CotEditor through Homebrew"
+run = "test -d /Applications/CotEditor.app || brew install --cask coteditor"
 
 [tasks."codex:install"]
 description = "Install or update Codex through Homebrew"

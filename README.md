@@ -18,7 +18,7 @@ mise bootstrap
 
 `mise bootstrap` は次の状態に収束させます。
 
-- Homebrew の CLI と主要 GUI アプリ（AeroSpace、AeroKit、ChatGPT/Codex、Raycastを含む）
+- Homebrew の CLI と主要 GUI アプリ（AeroSpace、AeroKit、CotEditor、ChatGPT/Codex、Raycastを含む）
 - Docker CLI、Docker Compose、Colima（Docker Desktopは使用しない）
 - Node.js、Python、Go、Deno、AWS CLI、Starship、zoxide
 - mise 自身と Fish、Git、Neovim、Karabiner、VS Code の設定リンク
