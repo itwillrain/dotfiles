@@ -1,1 +1,1 @@
-export NB_DIR="$HOME/gitserver/github.com/team-lab/nb"
+export NB_DIR="$HOME/.nb"
