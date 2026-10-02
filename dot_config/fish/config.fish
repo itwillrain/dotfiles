@@ -10,6 +10,9 @@ if command -q mise
 end
 
 if status is-interactive
+    # Hide the startup greeting.
+    set -g fish_greeting
+
     # Fish 4.4+ includes Catppuccin themes; keep the shell palette in Mocha.
     fish_config theme choose catppuccin-mocha --color-theme=dark >/dev/null 2>&1
 
