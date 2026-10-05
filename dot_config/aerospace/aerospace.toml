@@ -129,3 +129,8 @@ enter = "mode main"
 [mode.service.binding]
 esc = ["reload-config", "mode main"]
 r = ["flatten-workspace-tree", "mode main"]
+# Nest the focused window with its neighbour, e.g. split one half in two.
+h = ["join-with left", "mode main"]
+j = ["join-with down", "mode main"]
+k = ["join-with up", "mode main"]
+l = ["join-with right", "mode main"]
