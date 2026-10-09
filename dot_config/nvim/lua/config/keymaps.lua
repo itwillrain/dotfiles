@@ -34,3 +34,13 @@ end
 vim.keymap.set("n", "<leader>mw", toggle_herdr_pane("leaf", "right", "leaf --watch"), { desc = "Toggle leaf --watch pane (right)" })
 vim.keymap.set("n", "<leader>mW", toggle_herdr_pane("leaf", "down", "leaf --watch"), { desc = "Toggle leaf --watch pane (down)" })
 vim.keymap.set("n", "<leader>mm", toggle_herdr_pane("mermaid", "down", "mermaid"), { desc = "Toggle mermaid pane (down)" })
+
+-- Render the whole Markdown file (mermaid included) as HTML and open it in the browser.
+vim.keymap.set("n", "<leader>mo", function()
+	vim.cmd("silent write")
+	vim.system({ "fish", "-c", "md-open " .. vim.fn.shellescape(vim.fn.expand("%:p")) }, { text = true }, function(res)
+		if res.code ~= 0 then
+			vim.schedule(function() vim.notify(res.stderr, vim.log.levels.ERROR) end)
+		end
+	end)
+end, { desc = "Open Markdown as HTML in browser" })
