@@ -58,7 +58,6 @@
   "editor.fontFamily": "UDEV Gothic NFLG, SauceCodePro Nerd Font Mono, Monaco, 'Courier New', monospace, ",
   "terminal.integrated.fontSize": 14,
   "editor.fontSize": 14,
-  "vsicons.dontShowNewVersionMessage": true,
   "editor.fontWeight": "500",
   "emmet.triggerExpansionOnTab": true,
   "workbench.sideBar.location": "right",
@@ -79,5 +78,5 @@
     "asvetliakov.vscode-neovim": 1,
   },
   "gitlens.graph.details.location": "auto",
-  "chat.mcp.gallery.enabled": true,
+  "chat.mcp.gallery.enabled": true
 }
