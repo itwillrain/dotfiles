@@ -207,6 +207,7 @@ depends = [
   "aerospace:install",
   "aerokit:install",
   "alt-tab:install",
+  "antigravity:install",
   "chatgpt:install",
   "coteditor:install",
   "codex:install",
@@ -243,6 +244,16 @@ run = "test -d /Applications/AeroKit.app || brew install --cask jomatsu/tap/aero
 [tasks."alt-tab:install"]
 description = "Install AltTab through Homebrew"
 run = "test -d /Applications/AltTab.app || brew install --cask alt-tab"
+
+[tasks."antigravity:install"]
+description = "Install or update Antigravity CLI through Homebrew"
+run = '''
+if brew list --cask antigravity-cli >/dev/null 2>&1; then
+    brew upgrade --cask antigravity-cli
+else
+    brew install --cask antigravity-cli
+fi
+'''
 
 [tasks."chatgpt:install"]
 description = "Install ChatGPT through Homebrew"
