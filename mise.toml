@@ -65,6 +65,7 @@ zoxide = "latest"
 "brew:tokei" = "latest"
 "brew:tree-sitter-cli" = "latest"
 "brew:yq" = "latest"
+"brew:superfile" = "latest"
 
 [dotfiles]
 "~/.config/aerospace/aerospace.toml" = { source = "~/gitserver/github.com/itwillrain/dotfiles/dot_config/aerospace/aerospace.toml", mode = "symlink" }
