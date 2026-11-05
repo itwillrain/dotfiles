@@ -13,6 +13,7 @@ if status is-interactive
     # Hide the startup greeting.
     set -g fish_greeting
     fish_vi_key_bindings
+    bind -M insert ctrl-p up-or-search
 
     # Fish 4.4+ includes Catppuccin themes; keep the shell palette in Mocha.
     fish_config theme choose catppuccin-mocha --color-theme=dark >/dev/null 2>&1
