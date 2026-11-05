@@ -73,6 +73,10 @@ AeroSpaceでは、`Option + 1〜9`でWorkspaceを切り替え、
 方向移動も同じ考え方で、`Option + H/J/K/L`がフォーカス、
 `Option + Shift + H/J/K/L`がウィンドウ移動です。
 
+Cornixの配列は[キーマップと反映手順](keyboards/cornix/README.md)を参照してください。
+Fishで`cornix`と入力すると全レイヤー、`cornix 1`で数字・記号を表示します。
+編集する設定は`keyboards/cornix/keymap.vil`で、Vialから本体へ読み込みます。
+
 コンテナを使うときは、初回だけColimaを起動します。
 
 ```shell

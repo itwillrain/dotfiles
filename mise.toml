@@ -166,6 +166,16 @@ killall SystemUIServer >/dev/null 2>&1 || true
 description = "Validate the declarative workstation configuration"
 run = ["mise fmt --check", "mise bootstrap status"]
 
+[tasks."cornix:show"]
+description = "Show the Cornix keyboard layout in the terminal"
+dir = "~/gitserver/github.com/itwillrain/dotfiles"
+run = "python3 keyboards/cornix/show.py"
+
+[tasks."cornix:check"]
+description = "Verify the Cornix layout and terminal reference"
+dir = "~/gitserver/github.com/itwillrain/dotfiles"
+run = "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s keyboards/cornix -p 'test_*.py'"
+
 [tasks."skills:install"]
 description = "Restore agent skills from skills-lock.json"
 run = "cd \"$MISE_ORIGINAL_CWD\" && mise exec node -- npx --yes skills experimental_install"
